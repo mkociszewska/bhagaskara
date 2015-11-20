@@ -1,0 +1,106 @@
+@import "partials";
+@import "variables";
+@import "functions";
+
+* {
+ margin: 0;
+ box-sizing: border-box;
+}
+
+
+//grid
+
+.main_width {
+  width: 80%;
+  border: 1px solid pink;
+  margin: auto;
+}
+
+
+.grid-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row:before, .row:after {
+  content : "";
+  display : table;
+  clear: both;
+
+
+
+}
+
+[class*="col-"]{ //znajdź mi takie elementy w htmlu, które zawierają col-
+  float : left;
+  min-height : 1px;
+  width : 8.33%;
+  border: 2px solid black;
+
+}
+
+@function grid-width($n) {
+  @return $n * $grid-width;
+}
+
+@for $gridIterator from 1 through 12 {
+  .col-#{$gridIterator}{
+    width: grid-width($gridIterator);
+  }
+}
+
+
+
+//header
+
+header {
+  background-image: url("../images/base.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 0;
+  width: 100%;
+  padding-bottom: 90%;
+  text-align: center;
+
+  h3 {
+    font-family: existencelight;
+    font-size: 90px;
+    color: white;
+    padding-top: 10%;
+    padding-bottom: 3%;
+
+    span {
+      color: #9f449b;
+    }
+  }
+  h4 {
+    font-family: $font-family;
+    color: white;
+    font-size: 30px;
+  }
+
+  p {
+    font-family: $font-family;
+    color: white;
+    font-size: 20px;
+  }
+
+.header-nav {
+  border: 1px solid blue;
+    .col-2 {
+      background-image: url("../images/Shape%202.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid orangered;
+      padding-bottom: 20%;
+      font-family: $font-family;
+      color: white;
+
+
+
+
+    }
+  }
+
+}
