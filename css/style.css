@@ -433,4 +433,97 @@ header .mobileMenu {
   bottom: 5px;
 }
 
+.quote {
+  background-image: url("../images/base2.jpg");
+  background-size: cover;
+  padding-bottom: 6rem;
+  background-position: center;
+  width: 100%;
+}
+.quote h1 {
+  font-family: "Glyphter";
+  font-size: 3rem;
+  color: #fff;
+  text-transform: Uppercase;
+  text-align: center;
+  background-image: url("../images/Shape%202.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15%;
+  padding-top: 12%;
+  padding-bottom: 10%;
+}
+.quote p {
+  font-family: "latoregular";
+  font-size: 2rem;
+  color: #fff;
+  text-transform: none;
+  text-align: center;
+}
+
+.our_team h2 {
+  font-family: "existencelight";
+  font-size: 2rem;
+  color: #676767;
+  text-transform: none;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 3.5rem;
+  vertical-align: middle;
+}
+.our_team h2 span {
+  color: #9f449b;
+}
+.our_team .violetArrows {
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+.our_team .violetArrows a {
+  width: 40%;
+  display: inline-block;
+}
+.our_team .violetArrows a img {
+  width: 100%;
+}
+.our_team ul {
+  padding-left: 0;
+  text-align: center;
+  margin-top: 3.5rem;
+}
+.our_team ul li {
+  display: inline-block;
+  list-style: none;
+  width: 30%;
+}
+.our_team ul li a img {
+  width: 70%;
+  border-radius: 50%;
+}
+.our_team ul li h4 {
+  font-family: "latobold";
+  font-size: 1rem;
+  color: #484848;
+  text-transform: Uppercase;
+  margin-bottom: 8%;
+  margin-top: 8%;
+  text-align: center;
+}
+.our_team ul li p {
+  text-align: center;
+  font-family: "latohairline";
+  font-size: 0.8rem;
+  color: #484848;
+  text-transform: none;
+  margin-bottom: 2rem;
+}
+.our_team ul li p span {
+  background-image: url("../images/icons/Base3.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+  vertical-align: middle;
+}
+
 /*# sourceMappingURL=style.css.map */
