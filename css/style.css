@@ -221,6 +221,16 @@ header {
   padding-bottom: 90%;
   text-align: center;
 }
+@media only screen and (min-width: 1824px), only screen and (min-device-width: 1824px) {
+  header {
+    background-size: cover;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+  header {
+    padding-bottom: 170%;
+  }
+}
 header h3 {
   font-family: existencelight;
   font-size: 5em;
@@ -230,6 +240,16 @@ header h3 {
 }
 header h3 span {
   color: #9f449b;
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 320px) {
+  header h3 {
+    font-size: 1.8rem;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 320px) {
+  header h3 {
+    font-size: 1.8rem;
+  }
 }
 header h4 {
   font-family: "latohairline";
@@ -290,12 +310,14 @@ header .scroller img {
   position: absolute;
   top: 44%;
   width: 3%;
-  left: 48.7%;
+  left: 48.55%;
 }
-header .notVisible {
+
+.notVisible {
   display: none;
 }
-header .menuBtn span {
+
+.menuBtn span {
   display: block;
   width: 20px;
   height: 5px;
@@ -303,25 +325,27 @@ header .menuBtn span {
   background: #fff;
   border-radius: 30%;
 }
-header .mobileNav {
+
+.mobileNav {
   width: 100%;
   font-family: "latohairline";
 }
-header .mobileNav a {
+.mobileNav a {
   text-decoration: none;
   color: #fff;
 }
-header .mobileNav ul {
+.mobileNav ul {
   padding: 19%;
 }
-header .mobileNav li {
+.mobileNav li {
   padding: 5px;
   list-style: none;
   color: #fff;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
-header .mobileMenu {
+
+.mobileMenu {
   width: 80%;
   background-color: rgba(159, 68, 155, 0.9);
   overflow: visible;
@@ -365,12 +389,10 @@ header .mobileMenu {
   background-image: url("../images/Shape%202.svg");
   background-position: center;
   background-repeat: no-repeat;
+  stroke: #ccd0d2;
   background-size: 80%;
   padding-top: 50%;
   padding-bottom: 50%;
-}
-.merits h1 svg fill {
-  color: #ccd0d2;
 }
 .merits h3 {
   font-family: "latothin";
@@ -436,6 +458,7 @@ header .mobileMenu {
 .quote {
   background-image: url("../images/base2.jpg");
   background-size: cover;
+  background-attachment: fixed;
   padding-bottom: 6rem;
   background-position: center;
   width: 100%;
@@ -524,6 +547,94 @@ header .mobileMenu {
   background-position: center;
   padding: 1rem;
   vertical-align: middle;
+}
+
+.our_skills h2 {
+  font-family: "existencelight";
+  font-size: 2rem;
+  color: #676767;
+  text-transform: none;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 3.5rem;
+  vertical-align: middle;
+}
+.our_skills h2 span {
+  color: #9f449b;
+}
+.our_skills .grid-container {
+  width: 90%;
+  margin-bottom: 10%;
+}
+.our_skills .grid-container p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  margin-bottom: 4%;
+}
+.our_skills .col-6 {
+  padding: 2em;
+}
+.our_skills .col-6 .progress_grey {
+  width: 100%;
+  height: 15px;
+  background-color: lightgray;
+}
+.our_skills .col-6 .progress_grey .progress {
+  width: 80%;
+  height: 15px;
+  background-color: #9f449b;
+  animation: pulsowanie 3s infinite alternate;
+  -moz-animation: pulsowanie 3s infinite alternate;
+  -webkit-animation: pulsowanie 3s infinite alternate;
+}
+@keyframes pulsowanie {
+  0% {
+    width: 1%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.statistics {
+  background-color: #eeeeee;
+}
+.statistics .row {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.statistics .row .stat-count {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  color: black;
+  text-transform: none;
+  text-align: center;
+}
+.statistics .row p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: black;
+  text-transform: none;
+  text-align: center;
+}
+
+.quote_slider {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #eeeeee;
+}
+.quote_slider .quoteimg {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.portfolio .col-4 {
+  padding: 1%;
+  text-align: center;
+}
+.portfolio .col-4 img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

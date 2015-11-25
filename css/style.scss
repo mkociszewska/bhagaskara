@@ -4,18 +4,18 @@
 @import "mixins";
 
 * {
- margin: 0;
- box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 
 
-   //stylowanie nava
-   //&:hover {
-   //  fill: $colorviolet;
-   //  stroke: $colorviolet;
-   //  fill-opacity: 1.0;
-   //}
+//stylowanie nava
+//&:hover {
+//  fill: $colorviolet;
+//  stroke: $colorviolet;
+//  fill-opacity: 1.0;
+//}
 
 
 
@@ -38,9 +38,6 @@
   content : "";
   display : table;
   clear: both;
-
-
-
 }
 
 [class*="col-"]{ //znajdź mi takie elementy w htmlu, które zawierają col-
@@ -74,6 +71,14 @@ header {
   padding-bottom: 90%;
   text-align: center;
 
+  @include bp(large-screen) {
+    background-size: cover;
+  }
+
+  @include bp(iphone) {
+    padding-bottom: 170%;
+  }
+
   h3 {
     font-family: existencelight;
     font-size: 5em;
@@ -84,6 +89,16 @@ header {
     span {
       color: #9f449b;
     }
+
+
+    @include bp(iphone) {
+      font-size: 1.8rem;
+    }
+
+    @include bp(iphone-portrait) {
+      font-size: 1.8rem;
+    }
+
   }
   h4 {
     font-family: $font-family;
@@ -98,9 +113,9 @@ header {
     padding: 5%;
   }
 
-.header-nav {
-  border: 1px solid blue;
-  margin-top: 19%;
+  .header-nav {
+    border: 1px solid blue;
+    margin-top: 19%;
 
     .col-2 {
       background-image: url("../images/Shape%202.svg");
@@ -112,30 +127,27 @@ header {
       color: white;
       position: relative;
       vertical-align: middle;
+    }
 
-
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      //padding-top: 80%;
+      position: absolute;
+      top: 20%;
+      width: 40%;
+      left: 30%;
 
     }
 
-      img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        //padding-top: 80%;
-        position: absolute;
-        top: 20%;
-        width: 40%;
-        left: 30%;
-
-      }
-
     .topnav {
-        margin-top: -16%;
+      margin-top: -16%;
 
-        img {
-          top: 30%;
-        }
+      img {
+        top: 30%;
       }
+    }
 
   }
 
@@ -157,61 +169,71 @@ header {
       position: absolute;
       top: 44%;
       width: 3%;
-      left: 48.7%;
+      left: 48.55%;
 
     }
 
+    //@include bp(iphone) {
+    //  margin-top: 45%;
+    //}
+    //
+    //@include bp(iphone-portrait) {
+    //  margin-top: 58%;
+    //}
+
   }
 
-  //mobile menu
+}
 
-  .notVisible {
-    display: none;
+//mobile menu
+
+.notVisible {
+  display: none;
+}
+
+.menuBtn span {
+  display: block;
+  width: 20px;
+  height: 5px;
+  margin: 4px 0;
+  background: #fff;
+  border-radius: 30%;
+  //z-index: 99;
+}
+
+.mobileNav {
+  width: 100%;
+  font-family: $font-family;
+
+  a {
+    text-decoration: none;
+    color: #fff;
   }
 
-  .menuBtn span {
-    display: block;
-    width: 20px;
-    height: 5px;
-    margin: 4px 0;
-    background: #fff;
-    border-radius: 30%;
-    //z-index: 99;
+  ul {
+    padding: 19%;
   }
 
-  .mobileNav {
-    width: 100%;
-    font-family: $font-family;
-
-    a {
-      text-decoration: none;
-      color: #fff;
-    }
-
-    ul {
-      padding: 19%;
-    }
-
-    li {
-      padding: 5px;
-      list-style: none;
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-    }
-  }
-
-  .mobileMenu {
-    width: 80%;
-    @include transparentViolet(0.9);
-    overflow: visible;
-    position: fixed;
-    z-index: 999;
-
+  li {
+    padding: 5px;
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
   }
 }
 
-  //sticky menu
+.mobileMenu {
+  width: 80%;
+  @include transparentViolet(0.9);
+  overflow: visible;
+  position: fixed;
+  z-index: 999;
+
+}
+
+
+//sticky menu
 
 .sticky_menu {
   background-color: #fff;
@@ -255,13 +277,10 @@ header {
     background-image: url('../images/Shape%202.svg');
     background-position: center;
     background-repeat: no-repeat;
+    stroke: #ccd0d2;
     background-size: 80%;
     padding-top: 50%;
     padding-bottom: 50%;
-
-    svg fill {
-      color: #ccd0d2;
-    }
   }
 
   h3 {
@@ -284,11 +303,12 @@ header {
   padding-top: 4rem;
   padding-bottom: 4rem;
 
+
   .about {
     position: relative;
   }
 
-  h2 {
+  h2{
 
     @include fontLato('existencelight', 2rem, #676767, none);
     text-align: center;
@@ -299,13 +319,14 @@ header {
   }
 
   .col-7 {
-
+    //height: 20rem;
     img {
       width: 98%;
     }
   }
 
-  .col-5 {
+  .col-5{
+    //height: 20rem;
 
     p {
       @include fontLato($latolight, 0.7rem, #676767, none);
@@ -319,9 +340,9 @@ header {
       padding: 2% 4%;
       border: none;
       border-radius: 5px;
-      -webkit-box-shadow: 0px 4px 0px 0px rgba(107, 64, 104, 1);
-      -moz-box-shadow: 0px 4px 0px 0px rgba(107, 64, 104, 1);
-      box-shadow: 0px 4px 0px 0px rgba(107, 64, 104, 1);
+      -webkit-box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
+      -moz-box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
+      box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
       vertical-align: bottom;
       display: inline;
       color: #fff;
@@ -331,11 +352,12 @@ header {
   }
 }
 
-// QUOTE SECTION
+//QUOTE
 
 .quote {
   background-image: url("../images/base2.jpg");
   background-size: cover;
+  background-attachment: fixed;
   padding-bottom: 6rem;
   background-position: center;
   width: 100%;
@@ -357,7 +379,7 @@ header {
   }
 }
 
-// OUR TEAM
+//OUR TEAM
 
 .our_team {
   h2{
@@ -433,3 +455,127 @@ header {
     }
   }
 }
+
+
+//OUR SKILLS
+
+.our_skills {
+
+  h2{
+    @include fontLato('existencelight', 2rem, #676767, none);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
+    vertical-align: middle;
+    span {
+      color: $colorviolet;
+    }
+  }
+
+  .grid-container {
+    width: 90%;
+    margin-bottom: 10%;
+
+    p {
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      margin-bottom: 4%;
+    }
+  }
+
+
+  .col-6 {
+    padding: 2em;
+
+    .progress_grey {
+      width:100%;
+      height:15px;
+      background-color: lightgray;
+
+      .progress {
+        width:80%;
+        height:15px;
+        background-color: #9f449b;
+        animation: pulsowanie 3s infinite alternate;
+        -moz-animation: pulsowanie 3s infinite alternate;
+        -webkit-animation: pulsowanie 3s infinite alternate;
+      }
+
+      @keyframes pulsowanie {
+        0% {width:1%;}
+        100% {width:100%;}
+      }
+    }
+    //span {
+    //  //height: 10px;
+    //  //width: 80%;
+    //  //padding: 0.em;
+    //  background-color: dimgray;
+    //  padding-bottom: 12px;
+    //  border: 1px solid red;
+    //}
+    //}
+  }
+
+
+}
+
+
+// QUOTE 2
+//--
+
+
+
+// STATISTICS
+
+.statistics {
+  background-color: #eeeeee;
+
+  .row {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    .stat-count {
+      @include fontLato($helvetica, 3rem, black, none);
+      text-align: center;
+    }
+
+    p {
+      @include fontLato($helvetica, 0.8rem, black, none);
+      text-align: center;
+    }
+  }
+}
+
+//  QUOTE SLIDER
+
+.quote_slider {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #eeeeee;
+
+  .quoteimg {
+    width: 10%;
+    border-radius: 50%;
+    //display: block;
+  }
+}
+
+
+//  PORTFOLIO
+
+.portfolio {
+
+  .col-4 {
+    padding: 1%;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//
