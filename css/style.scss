@@ -246,6 +246,10 @@ header {
   text-align: center;
   height: 35rem;
 
+  .col-3 {
+    margin-top: 10%;
+  }
+
   h1 {
     @include fontLato($icon-font, 3rem, #ccd0d2, Uppercase);
     background-image: url('../images/Shape%202.svg');
@@ -270,5 +274,60 @@ header {
     padding: 0% 10% 15% 10%;
   }
 
+}
+
+
+//ABOUT US
+
+.about_us {
+  background-color: #fff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  .about {
+    position: relative;
+  }
+
+  h2 {
+
+    @include fontLato('existencelight', 2rem, #676767, none);
+    text-align: center;
+    margin-bottom: 4rem;
+    span {
+      color: $colorviolet;
+    }
+  }
+
+  .col-7 {
+
+    img {
+      width: 98%;
+    }
+  }
+
+  .col-5 {
+
+    p {
+      @include fontLato($latolight, 0.7rem, #676767, none);
+      line-height: 180%;
+      padding-left: 4%;
+      opacity: 0.5;
+    }
+
+    button {
+      background-color: $colorviolet;
+      padding: 2% 4%;
+      border: none;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 4px 0px 0px rgba(107, 64, 104, 1);
+      -moz-box-shadow: 0px 4px 0px 0px rgba(107, 64, 104, 1);
+      box-shadow: 0px 4px 0px 0px rgba(107, 64, 104, 1);
+      vertical-align: bottom;
+      display: inline;
+      color: #fff;
+      position: absolute;
+      bottom: 5px;
+    }
+  }
 }
 
