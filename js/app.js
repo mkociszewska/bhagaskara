@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 
-    //hamburger
+    //hamburger przenieś do sassa - display: none itd
     function setMenu() {
 
 

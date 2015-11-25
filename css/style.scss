@@ -209,10 +209,66 @@ header {
     z-index: 999;
 
   }
-
+}
 
   //sticky menu
 
+.sticky_menu {
+  background-color: #fff;
+  height: 20%;
+  padding: 4% 0%;
+
+  a {
+
+  }
+
+  ul {
+    vertical-align: middle;
+    text-align: right;
+    height: 100%;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+    @include fontLato($font-family-second, 0.8rem, #676767, Uppercase);
+    padding-right: 1%;
+  }
 
 
 }
+
+
+//grey section with merits
+
+.merits {
+  background-color: #eeeeee;
+  text-align: center;
+  height: 35rem;
+
+  h1 {
+    @include fontLato($icon-font, 3rem, #ccd0d2, Uppercase);
+    background-image: url('../images/Shape%202.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    padding-top: 50%;
+    padding-bottom: 50%;
+
+    svg fill {
+      color: #ccd0d2;
+    }
+  }
+
+  h3 {
+    @include fontLato($latothin, 1rem, #676767, lowercase);
+    margin-bottom: 25%;
+  }
+
+  p {
+    @include fontLato($latothin, 0.8rem, #676767, lowercase);
+    padding: 0% 10% 15% 10%;
+  }
+
+}
+

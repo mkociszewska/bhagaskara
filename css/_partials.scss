@@ -288,3 +288,14 @@
   font-style: normal;
 
 }
+
+@font-face {
+  font-family: 'Glyphter';
+  src: url('../fonts/glyphter-font/Glyphter.eot');
+  src: url('../fonts/glyphter-font/Glyphter.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/glyphter-font/Glyphter.woff') format('woff'),
+  url('../fonts/glyphter-font/Glyphter.ttf') format('truetype'),
+  url('../fonts/glyphter-font/Glyphter.svg#Glyphter') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

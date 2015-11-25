@@ -126,3 +126,10 @@ $media-queries: true;
 @mixin transparentViolet($opacity) {
   background-color: rgba(159, 68, 155, $opacity);
 }
+
+@mixin fontLato($fontFamily,$fontSize,$color,$fontCase){
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $color;
+  text-transform: $fontCase;
+}
