@@ -592,12 +592,9 @@ header .scroller img {
   background-color: lightgray;
 }
 .our_skills .col-6 .progress_grey .progress {
-  width: 80%;
+  width: 0%;
   height: 15px;
   background-color: #9f449b;
-  animation: pulsowanie 3s infinite alternate;
-  -moz-animation: pulsowanie 3s infinite alternate;
-  -webkit-animation: pulsowanie 3s infinite alternate;
 }
 @keyframes pulsowanie {
   0% {

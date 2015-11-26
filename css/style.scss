@@ -511,12 +511,12 @@ header {
       background-color: lightgray;
 
       .progress {
-        width:80%;
+        width:0%;
         height:15px;
         background-color: #9f449b;
-        animation: pulsowanie 3s infinite alternate;
-        -moz-animation: pulsowanie 3s infinite alternate;
-        -webkit-animation: pulsowanie 3s infinite alternate;
+        //animation: pulsowanie 3s infinite alternate;
+        //-moz-animation: pulsowanie 3s infinite alternate;
+        //-webkit-animation: pulsowanie 3s infinite alternate;
       }
 
       @keyframes pulsowanie {

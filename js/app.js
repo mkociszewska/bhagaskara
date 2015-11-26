@@ -62,43 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    //------------------------------------ABOUT US GALLERY------------------------------------
-
-    //var allPeople = $(".peopleList li");
-    //var nextPerson = $("#nextPerson");
-    //var prevPerson = $("#prevPerson");
-    //var currentPerson = 0;
-    //
-    //allPeople.eq(currentPerson).fadeIn(2000);
-    //
-    //nextPerson.on("click", function(){
-    //    allPeople.eq(currentPerson).fadeOut(2000, function() {
-    //        allPeople.hide();
-    //        allPeople.eq(currentPerson).fadeIn(2000);
-    //    });
-    //    currentPerson++;
-    //    if(currentPerson >= allPictures.length) {
-    //        currentPerson = 0;
-    //    }
-    //
-    //});
-    //
-    //
-    //prevPerson.on("click", function(){
-    //    allPeople.eq(currentPerson).fadeOut(2000, function(){
-    //        allPeople.eq(currentPerson).fadeIn(2000);
-    //    });
-    //    currentPerson--;
-    //    if(currentPerson < 0) {
-    //        currentPerson = allPeople.length-1;
-    //    }
-    //
-    //})
-    //
-    //
-    //
-    //});
-
 //------------------------------------ABOUT US GALLERY------------------------------------
 
 var allPeople = $(".peopleList li");
@@ -106,9 +69,9 @@ var nextPerson = $("#nextPerson");
 var prevPerson = $("#prevPerson");
 var currentPerson = 1;
 var peopleList = $(".peopleList");
+var personId = $(allPeople[currentPerson]);
 
-
-$(allPeople[currentPerson]).removeClass('opacity');
+    personId.removeClass('opacity');
 
 nextPerson.on("click", function(){
     //$(allPeople[currentPerson]).removeClass('opacity');
@@ -119,6 +82,8 @@ nextPerson.on("click", function(){
         }
     $(allPeople).addClass('opacity');
     $(allPeople[currentPerson]).removeClass('opacity');
+
+    animatebars($(allPeople[currentPerson]));
 
 });
 
@@ -134,8 +99,41 @@ prevPerson.on("click", function(){
     $(allPeople).addClass('opacity');
     $(allPeople[currentPerson]).removeClass('opacity');
 
+    animatebars($(allPeople[currentPerson]));
+
 });
 
 
+    //------------------------------------ PROGRESS BAR ------------------------------------
+
+    function animatebars(skill) {
+        //var skill = $(".skill");
+
+
+        console.log(skill);
+
+        var webpercent = skill.data('webpercent');
+        var graphicpercent = skill.data('graphicpercent');
+        var htmlpercent = skill.data('htmlpercent');
+        var uxpercent = skill.data('uxpercent');
+
+        var progressbarweb = $(".progress.web");
+        progressbarweb.animate({width:webpercent}, 800);
+
+        var progressbargraphic = $(".progress.graphic");
+        progressbargraphic.animate({width:graphicpercent}, 800);
+
+        var progressbarhtml = $(".progress.html");
+        progressbarhtml.animate({width:htmlpercent}, 800);
+
+        var progressbarux = $(".progress.ux");
+        progressbarux.animate({width:uxpercent}, 800);
+    };
+
+
+    animatebars(personId);
+
+    //var web = $(allPeople[currentPerson]).data('data-webpercent');
+    //console.log(web);
 
 });
