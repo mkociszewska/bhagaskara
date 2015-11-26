@@ -38,4 +38,34 @@ document.addEventListener('DOMContentLoaded', function() {
     setMenu();
     setClick();
 
+
+
+    //------------------------------------STICKY MENU------------------------------------
+
+    var stickyNavTop = $('.sticky_menu').offset().top;
+
+    var stickyNav = function(){
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > stickyNavTop) {
+            $('.sticky_menu').addClass('sticky');
+        } else {
+            $('.sticky_menu').removeClass('sticky');
+        }
+    };
+
+    stickyNav();
+
+    $(window).scroll(function() {
+        stickyNav();
+    });
+
+
+
+    //------------------------------------ABOUT US GALLERY------------------------------------
+
+
+
+
+
     });
