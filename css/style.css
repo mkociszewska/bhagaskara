@@ -556,6 +556,9 @@ header .scroller img {
   padding: 1rem;
   vertical-align: middle;
 }
+.our_team .opacity {
+  opacity: 0.5;
+}
 
 .our_skills h2 {
   font-family: "existencelight";
