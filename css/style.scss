@@ -605,9 +605,10 @@ header {
     width: 40%;
     margin: auto;
     text-align: center;
+    margin-bottom: 2%;
 
     button {
-      @include fontLato($helvetica, 1rem, black, Uppercase);
+      @include fontLato($font-family-second, 1rem, black, Uppercase);
       //padding: 0.5% 1%;
       text-align: center;
       background-color: white;
@@ -615,6 +616,13 @@ header {
       border-radius: 3px;
       margin-left: 2%;
       margin-right: 2%;
+      width: 5rem;
+
+      &:hover {
+        border: 1px solid $colorviolet;
+        background-color: $colorviolet;
+        @include fontLato($font-family-second, 1rem, white, Uppercase);
+      }
     }
   }
   h2 {
@@ -652,9 +660,36 @@ header {
         @include fontLato($font-family, 15rem, #fff, Uppercase);
         vertical-align: middle;
         @include transparentGrey(0.6);
-
-
       }
+
+      .bigImage {
+        @include transparentGrey(0.8);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left:0;
+        z-index: 999;
+
+        img {
+          //margin: auto;
+          width:30%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -15%; /*subtract by half width*/
+          margin-top: -150px; /*subtract by half height*/
+        }
+      }
+
+    }
+
+    h4 {
+      @include fontLato($font-family, 1.2rem, black, none);
+    }
+
+    p {
+      @include fontLato($font-family, 0.8rem, $colorgrey, none);
     }
   }
 }

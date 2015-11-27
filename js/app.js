@@ -156,7 +156,23 @@ prevPerson.on("click", function(){
     pictureHover();
 
 
+    var bigImage = $(".bigImage");
+    console.log(bigImage);
 
+    bigImage.hide();
+
+    function imageEnlarge() {
+        $(portfolioPictureOverlay).click(function(){
+            console.log(this);
+            $(this).next(".bigImage").show();
+        });
+
+        $(bigImage).click(function(){
+            $(this).hide();
+        })
+    }
+
+    imageEnlarge();
 
     //------------------------------------ QUOTE SLIDER ------------------------------------
 

@@ -663,9 +663,10 @@ header .scroller img {
   width: 40%;
   margin: auto;
   text-align: center;
+  margin-bottom: 2%;
 }
 .portfolio .buttons button {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "latoregular";
   font-size: 1rem;
   color: black;
   text-transform: Uppercase;
@@ -675,6 +676,15 @@ header .scroller img {
   border-radius: 3px;
   margin-left: 2%;
   margin-right: 2%;
+  width: 5rem;
+}
+.portfolio .buttons button:hover {
+  border: 1px solid #9f449b;
+  background-color: #9f449b;
+  font-family: "latoregular";
+  font-size: 1rem;
+  color: white;
+  text-transform: Uppercase;
 }
 .portfolio h2 {
   font-family: "existencelight";
@@ -714,6 +724,37 @@ header .scroller img {
   text-transform: Uppercase;
   vertical-align: middle;
   background-color: rgba(86, 93, 103, 0.6);
+}
+.portfolio .project .picture .bigImage {
+  background-color: rgba(86, 93, 103, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.portfolio .project .picture .bigImage img {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15%;
+  /*subtract by half width*/
+  margin-top: -150px;
+  /*subtract by half height*/
+}
+.portfolio .project h4 {
+  font-family: "latohairline";
+  font-size: 1.2rem;
+  color: black;
+  text-transform: none;
+}
+.portfolio .project p {
+  font-family: "latohairline";
+  font-size: 0.8rem;
+  color: #565d67;
+  text-transform: none;
 }
 
 /*# sourceMappingURL=style.css.map */
