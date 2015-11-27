@@ -1,0 +1,743 @@
+@import "partials";
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "slick.css";
+@import "slick-theme.css";
+
+* {
+ margin: 0;
+ box-sizing: border-box;
+}
+
+
+
+   //stylowanie nava
+   //&:hover {
+   //  fill: $colorviolet;
+   //  stroke: $colorviolet;
+   //  fill-opacity: 1.0;
+   //}
+
+
+
+//------------------------------------grid------------------------------------
+
+.main_width {
+  width: 80%;
+  border: 1px solid pink;
+  margin: auto;
+}
+
+
+.grid-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row:before, .row:after {
+  content : "";
+  display : table;
+  clear: both;
+}
+
+[class*="col-"]{ //znajdź mi takie elementy w htmlu, które zawierają col-
+  float : left;
+  min-height : 1px;
+  width : 8.33%;
+  border: 2px solid black;
+
+}
+
+@function grid-width($n) {
+  @return $n * $grid-width;
+}
+
+@for $gridIterator from 1 through 12 {
+  .col-#{$gridIterator}{
+    width: grid-width($gridIterator);
+  }
+}
+
+
+
+//------------------------------------header------------------------------------
+
+header {
+  background-image: url("../images/base.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 0;
+  width: 100%;
+  padding-bottom: 66%;
+  text-align: center;
+
+  @include bp(large-screen) {
+    background-size: cover;
+  }
+
+  @include bp(iphone) {
+      padding-bottom: 170%;
+  }
+
+  h3 {
+    font-family: existencelight;
+    font-size: 5em;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 3%;
+
+    span {
+      color: #9f449b;
+    }
+
+
+    @include bp(iphone) {
+      font-size: 1.8rem;
+    }
+
+    @include bp(iphone-portrait) {
+      font-size: 1.8rem;
+    }
+
+  }
+  h4 {
+    font-family: $font-family;
+    color: white;
+    font-size: 2.5em;
+  }
+
+  p {
+    font-family: $font-family;
+    color: white;
+    font-size: 1.3em;
+    padding: 5%;
+  }
+
+.header-nav {
+  border: 1px solid blue;
+  margin-top: 19%;
+
+    .col-2 {
+      background-image: url("../images/Shape%202.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 98%;
+      border: 1px solid orangered;
+      padding-bottom: 20%;
+      color: white;
+      position: relative;
+      vertical-align: middle;
+
+      &:hover {
+        background-image: url("../images/icons/violet.svg");
+        background-size: 98%;
+
+      }
+    }
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        //padding-top: 80%;
+        position: absolute;
+        top: 20%;
+        width: 40%;
+        left: 30%;
+
+      }
+
+    .topnav {
+        margin-top: -16%;
+
+        img {
+          top: 30%;
+        }
+      }
+
+  }
+
+  .scroller {
+    background-image: url("../images/Shape%202.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    border: 1px solid orangered;
+    padding-bottom: 15%;
+    color: white;
+    position: relative;
+    vertical-align: middle;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+      top: 44%;
+      width: 3%;
+      left: 48.55%;
+
+    }
+
+    //@include bp(iphone) {
+    //  margin-top: 45%;
+    //}
+    //
+    //@include bp(iphone-portrait) {
+    //  margin-top: 58%;
+    //}
+
+  }
+
+}
+
+//------------------------------------mobile menu------------------------------------
+
+.notVisible {
+  display: none;
+}
+
+.menuBtn span {
+  display: block;
+  width: 20px;
+  height: 5px;
+  margin: 4px 0;
+  background: #fff;
+  border-radius: 30%;
+  //z-index: 99;
+}
+
+.mobileNav {
+  width: 100%;
+font-family: $font-family;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  ul {
+    padding: 19%;
+  }
+
+  li {
+    padding: 5px;
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+}
+
+.mobileMenu {
+  width: 80%;
+  @include transparentViolet(0.9);
+  overflow: visible;
+  position: fixed;
+  z-index: 999;
+
+}
+
+
+//------------------------------------sticky menu------------------------------------
+
+.sticky_menu {
+  background-color: #fff;
+  //height: 20%;
+  padding: 3% 0%;
+
+  a {
+
+  }
+
+  ul {
+    vertical-align: middle;
+    text-align: right;
+    height: 100%;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+    @include fontLato($font-family-second, 0.8rem, #676767, Uppercase);
+    padding-right: 1%;
+  }
+
+
+}
+
+//------------------------------------ sticky class------------------------------------
+
+.sticky {
+  position: fixed;
+  //width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+
+//------------------------------------grey section with merits------------------------------------
+
+.merits {
+  background-color: #eeeeee;
+  text-align: center;
+  height: 40rem;
+
+  .col-3 {
+    margin-top: 10%;
+  }
+
+   h1 {
+     @include fontLato($icon-font, 3rem, #ccd0d2, Uppercase);
+     background-image: url('../images/Shape%202.svg');
+     background-position: center;
+     background-repeat: no-repeat;
+     stroke: #ccd0d2;
+     background-size: 80%;
+     padding-top: 50%;
+     padding-bottom: 50%;
+   }
+
+   h3 {
+      @include fontLato($latothin, 1rem, #676767, lowercase);
+     margin-bottom: 25%;
+   }
+
+  p {
+    @include fontLato($latothin, 0.8rem, #676767, lowercase);
+    padding: 0% 10% 15% 10%;
+  }
+
+}
+
+
+//------------------------------------ABOUT US------------------------------------
+
+.about_us {
+  background-color: #fff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+
+  .about {
+    position: relative;
+  }
+
+  h2{
+
+    @include fontLato('existencelight', 2rem, #676767, none);
+    text-align: center;
+    margin-bottom: 4rem;
+    span {
+      color: $colorviolet;
+    }
+  }
+
+  .col-7 {
+    //height: 20rem;
+    img {
+      width: 98%;
+    }
+  }
+
+  .col-5{
+    //height: 20rem;
+
+    p {
+      @include fontLato($latolight, 0.7rem, #676767, none);
+      line-height: 180%;
+      padding-left: 4%;
+      opacity: 0.5;
+    }
+
+    button {
+      background-color: $colorviolet;
+      padding: 2% 4%;
+      border: none;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
+      -moz-box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
+      box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
+      vertical-align: bottom;
+      display: inline;
+      color: #fff;
+      position: absolute;
+      bottom: 5px;
+    }
+  }
+}
+
+//------------------------------------QUOTE------------------------------------
+
+.quote {
+  background-image: url("../images/base2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 6rem;
+  background-position: center;
+  width: 100%;
+
+  h1{
+    @include fontLato($icon-font, 3rem, #fff, Uppercase);
+    text-align: center;
+    background-image: url('../images/Shape%202.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    padding-top: 12%;
+    padding-bottom: 10%;
+  }
+
+  p {
+    @include fontLato($font-family-second, 2rem, #fff, none);
+    text-align: center;
+  }
+}
+
+//------------------------------------OUR TEAM------------------------------------
+
+.our_team {
+  h2{
+    @include fontLato('existencelight', 2rem, #676767, none);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
+    vertical-align: middle;
+    span {
+      color: $colorviolet;
+    }
+  }
+
+
+  .violetArrows {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+
+    a {
+      width: 40%;
+      display: inline-block;
+
+    img {
+      width: 100%;
+    }
+   }
+  }
+
+
+  ul {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 3.5rem;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      width: 30%;
+
+      a {
+          //border: 2px dashed green;
+
+      img {
+        width: 70%;
+        border-radius: 50%;
+        //border: 2px solid blue;
+
+      }
+    }
+
+      h4 {
+        @include fontLato('latobold', 1rem, #484848, Uppercase);
+        margin-bottom: 8%;
+        margin-top: 8%;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        @include fontLato($font-family, 0.8rem, #484848, none);
+        margin-bottom: 2rem;
+
+        span {
+          background-image: url("../images/icons/Base3.svg");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+          padding: 1rem;
+          vertical-align: middle;
+        }
+      }
+  }
+  }
+
+  .opacity {
+    opacity: 0.5;
+  }
+}
+
+
+//------------------------------------OUR SKILLS------------------------------------
+
+.our_skills {
+
+  h2{
+    @include fontLato('existencelight', 2rem, #676767, none);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
+    vertical-align: middle;
+    span {
+      color: $colorviolet;
+    }
+  }
+
+  .grid-container {
+    width: 90%;
+    margin-bottom: 10%;
+
+    p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+      margin-bottom: 4%;
+    }
+  }
+
+
+  .col-6 {
+    padding: 2em;
+
+    .progress_grey {
+      width:100%;
+      height:15px;
+      background-color: lightgray;
+
+    .progress {
+      width:0;
+      height:15px;
+      background-color: #9f449b;
+      //animation: pulsowanie 3s infinite alternate;
+      //-moz-animation: pulsowanie 3s infinite alternate;
+      //-webkit-animation: pulsowanie 3s infinite alternate;
+    }
+
+    @keyframes pulsowanie {
+      0% {width:1%;}
+      100% {width:100%;}
+    }
+    }
+    //span {
+    //  //height: 10px;
+    //  //width: 80%;
+    //  //padding: 0.em;
+    //  background-color: dimgray;
+    //  padding-bottom: 12px;
+    //  border: 1px solid red;
+    //}
+    //}
+  }
+
+
+}
+
+
+// ------------------------------------QUOTE 2------------------------------------
+//--
+
+
+
+// ------------------------------------STATISTICS------------------------------------
+
+.statistics {
+  background-color: #eeeeee;
+
+  .row {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    .stat-count {
+      @include fontLato($helvetica, 3rem, black, none);
+      text-align: center;
+    }
+
+    p {
+      @include fontLato($helvetica, 0.8rem, black, none);
+      text-align: center;
+    }
+  }
+}
+
+// ------------------------------------ QUOTE SLIDER------------------------------------
+
+.quote_slider {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #eeeeee;
+  padding-bottom: 3%;
+
+  .quoteimg {
+    width: 10%;
+    border-radius: 50%;
+    margin: auto;
+    //display: block;
+  }
+
+  .smartQuote {
+    @include fontLato($font-family, 1.3rem, black, none);
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+  }
+
+  .quoteMan {
+    @include fontLato($helvetica, 0.8rem, black, Uppercase);
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+
+// ------------------------------------ PORTFOLIO------------------------------------
+
+.portfolio {
+
+  .buttons{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2%;
+
+  button {
+    @include fontLato($font-family-second, 1rem, black, Uppercase);
+    //padding: 0.5% 1%;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 5rem;
+
+    &:hover {
+      border: 1px solid $colorviolet;
+      background-color: $colorviolet;
+      @include fontLato($font-family-second, 1rem, white, Uppercase);
+    }
+  }
+  }
+  h2 {
+    @include fontLato('existencelight', 2rem, #676767, none);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
+    vertical-align: middle;
+    span {
+      color: $colorviolet;
+    }
+  }
+
+  .project {
+    padding: 1%;
+    text-align: center;
+
+    .picture {
+      border: 1px dotted red;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .overlay {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 99%;
+        padding: 1%;
+        text-align: center;
+        //font-size: 15rem;
+        @include fontLato($font-family, 15rem, #fff, Uppercase);
+        vertical-align: middle;
+        @include transparentGrey(0.6);
+      }
+
+      .bigImage {
+        @include transparentGrey(0.8);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left:0;
+        z-index: 999;
+
+        img {
+          //margin: auto;
+          width:30%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -15%; /*subtract by half width*/
+          margin-top: -150px; /*subtract by half height*/
+        }
+      }
+
+    }
+
+    h4 {
+      @include fontLato($font-family, 1.2rem, black, none);
+    }
+
+    p {
+      @include fontLato($font-family, 0.8rem, $colorgrey, none);
+    }
+  }
+}
+
+
+//------------------------------------ CONTACT ------------------------------------
+
+.formInputs {
+  display: block;
+
+  input{
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    @include fontLato($font-family, 0.8rem, black, none);
+
+    &:focus {
+      outline: 1px solid $colorviolet;
+    }
+
+    [name="yourmessage"] {
+
+    }
+
+
+  }
+}
+
+.adress {
+  padding: 1rem;
+
+  p{
+  @include fontLato($font-family, 1rem, black, none);
+    margin-bottom: 1rem;
+  }
+
+  & :nth-child(2) {
+    @include fontLato($bebasbold, 1rem, black, none);
+
+  }
+}
+
+//------------------------------------ FOOTER ------------------------------------
