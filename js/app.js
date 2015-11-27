@@ -128,12 +128,30 @@ prevPerson.on("click", function(){
 
         var progressbarux = $(".progress.ux");
         progressbarux.animate({width:uxpercent}, 800);
-    };
+    }
 
 
     animatebars(personId);
 
-    //var web = $(allPeople[currentPerson]).data('data-webpercent');
-    //console.log(web);
+    //------------------------------------ PORTFOLIO ------------------------------------
+    //------------------------------------ hover
 
+    var portfolioPicture = $(".picture img");
+    var portfolioPictureOverlay = $(".overlay");
+    var pictureParent = $(".picture");
+
+    portfolioPictureOverlay.hide();
+
+    function pictureHover() {
+
+        $(portfolioPicture).mouseover(function() {
+            $(this).next(".overlay").show();
+        });
+
+        portfolioPictureOverlay.mouseleave(function() {
+            $(".overlay").hide();
+        })
+    }
+
+    pictureHover();
 });

@@ -19,7 +19,7 @@
 
 
 
-//grid
+//------------------------------------grid------------------------------------
 
 .main_width {
   width: 80%;
@@ -60,7 +60,7 @@
 
 
 
-//header
+//------------------------------------header------------------------------------
 
 header {
   background-image: url("../images/base.png");
@@ -68,7 +68,7 @@ header {
   background-repeat: no-repeat;
   height: 0;
   width: 100%;
-  padding-bottom: 90%;
+  padding-bottom: 66%;
   text-align: center;
 
   @include bp(large-screen) {
@@ -83,7 +83,7 @@ header {
     font-family: existencelight;
     font-size: 5em;
     color: white;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 3%;
 
     span {
@@ -185,7 +185,7 @@ header {
 
 }
 
-//mobile menu
+//------------------------------------mobile menu------------------------------------
 
 .notVisible {
   display: none;
@@ -233,7 +233,7 @@ header {
 }
 
 
-//sticky menu
+//------------------------------------sticky menu------------------------------------
 
 .sticky_menu {
   background-color: #fff;
@@ -260,7 +260,7 @@ header {
 
 }
 
-// sticky class
+//------------------------------------ sticky class------------------------------------
 
 .sticky {
   position: fixed;
@@ -272,13 +272,12 @@ header {
   border-top: 0;
 }
 
-
-//grey section with merits
+//------------------------------------grey section with merits------------------------------------
 
 .merits {
   background-color: #eeeeee;
   text-align: center;
-  height: 35rem;
+  height: 40rem;
 
   .col-3 {
     margin-top: 10%;
@@ -308,7 +307,7 @@ header {
 }
 
 
-//ABOUT US
+//------------------------------------ABOUT US------------------------------------
 
 .about_us {
   background-color: #fff;
@@ -364,7 +363,7 @@ header {
   }
 }
 
-//QUOTE
+//------------------------------------QUOTE------------------------------------
 
 .quote {
   background-image: url("../images/base2.jpg");
@@ -391,7 +390,7 @@ header {
   }
 }
 
-//OUR TEAM
+//------------------------------------OUR TEAM------------------------------------
 
 .our_team {
   h2{
@@ -470,11 +469,10 @@ header {
   .opacity {
     opacity: 0.5;
   }
-
 }
 
 
-//OUR SKILLS
+//------------------------------------OUR SKILLS------------------------------------
 
 .our_skills {
 
@@ -511,7 +509,7 @@ header {
       background-color: lightgray;
 
       .progress {
-        width:0%;
+        width:0;
         height:15px;
         background-color: #9f449b;
         //animation: pulsowanie 3s infinite alternate;
@@ -539,12 +537,12 @@ header {
 }
 
 
-// QUOTE 2
+// ------------------------------------QUOTE 2------------------------------------
 //--
 
 
 
-// STATISTICS
+// ------------------------------------STATISTICS------------------------------------
 
 .statistics {
   background-color: #eeeeee;
@@ -566,7 +564,7 @@ header {
   }
 }
 
-//  QUOTE SLIDER
+// ------------------------------------ QUOTE SLIDER------------------------------------
 
 .quote_slider {
   margin: 0 auto;
@@ -581,18 +579,70 @@ header {
 }
 
 
-//  PORTFOLIO
+// ------------------------------------ PORTFOLIO------------------------------------
 
 .portfolio {
 
-  .col-4 {
+  .buttons{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+
+    button {
+      @include fontLato($helvetica, 1rem, black, Uppercase);
+      //padding: 0.5% 1%;
+      text-align: center;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 3px;
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+  }
+  h2 {
+    @include fontLato('existencelight', 2rem, #676767, none);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
+    vertical-align: middle;
+    span {
+      color: $colorviolet;
+    }
+  }
+
+  .project {
     padding: 1%;
     text-align: center;
 
-    img {
-      width: 100%;
+    .picture {
+      border: 1px dotted red;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .overlay {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 99%;
+        padding: 1%;
+        text-align: center;
+        //font-size: 15rem;
+        @include fontLato($font-family, 15rem, #fff, Uppercase);
+        vertical-align: middle;
+        @include transparentGrey(0.6);
+
+
+      }
     }
   }
 }
 
-//
+
+//------------------------------------ CONTACT ------------------------------------
+
+
+//------------------------------------ FOOTER ------------------------------------

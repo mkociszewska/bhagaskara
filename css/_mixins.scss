@@ -133,3 +133,7 @@ $media-queries: true;
   color: $color;
   text-transform: $fontCase;
 }
+
+@mixin transparentGrey($opacity) {
+  background-color: rgba(86, 93, 103, $opacity);
+}

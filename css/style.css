@@ -218,7 +218,7 @@ header {
   background-repeat: no-repeat;
   height: 0;
   width: 100%;
-  padding-bottom: 90%;
+  padding-bottom: 66%;
   text-align: center;
 }
 @media only screen and (min-width: 1824px), only screen and (min-device-width: 1824px) {
@@ -235,7 +235,7 @@ header h3 {
   font-family: existencelight;
   font-size: 5em;
   color: white;
-  padding-top: 10%;
+  padding-top: 5%;
   padding-bottom: 3%;
 }
 header h3 span {
@@ -384,7 +384,7 @@ header .scroller img {
 .merits {
   background-color: #eeeeee;
   text-align: center;
-  height: 35rem;
+  height: 40rem;
 }
 .merits .col-3 {
   margin-top: 10%;
@@ -592,7 +592,7 @@ header .scroller img {
   background-color: lightgray;
 }
 .our_skills .col-6 .progress_grey .progress {
-  width: 0%;
+  width: 0;
   height: 15px;
   background-color: #9f449b;
 }
@@ -637,12 +637,61 @@ header .scroller img {
   border-radius: 50%;
 }
 
-.portfolio .col-4 {
+.portfolio .buttons {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+.portfolio .buttons button {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  color: black;
+  text-transform: Uppercase;
+  text-align: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.portfolio h2 {
+  font-family: "existencelight";
+  font-size: 2rem;
+  color: #676767;
+  text-transform: none;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 3.5rem;
+  vertical-align: middle;
+}
+.portfolio h2 span {
+  color: #9f449b;
+}
+.portfolio .project {
   padding: 1%;
   text-align: center;
 }
-.portfolio .col-4 img {
+.portfolio .project .picture {
+  border: 1px dotted red;
+  position: relative;
+}
+.portfolio .project .picture img {
   width: 100%;
+}
+.portfolio .project .picture .overlay {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 99%;
+  padding: 1%;
+  text-align: center;
+  font-family: "latohairline";
+  font-size: 15rem;
+  color: #fff;
+  text-transform: Uppercase;
+  vertical-align: middle;
+  background-color: rgba(86, 93, 103, 0.6);
 }
 
 /*# sourceMappingURL=style.css.map */
