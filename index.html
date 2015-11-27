@@ -7,8 +7,10 @@
     <title>Bhagaskara</title>
 
     <link href="css/style2.css" rel="stylesheet"/>
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/slick.css"/>
 
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
 </head>
@@ -286,13 +288,32 @@
     </div>
 </section>
 
-
 <section class="quote_slider">
     <div class="main_width">
-        <img src="images/people/pizzacat1.jpg" class="quoteimg">
-        <p>“Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum. Duis mollis, est non commodo luctus, nisi erat ”</p>
-        <p>LESALE CHRISTOPER, PINTEREST</p>
+        <div class="slide-container" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+
+            <div>
+                <img src="images/people/pizzacat1.jpg" class="quoteimg">
+                <p class="smartQuote">“Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum. Duis mollis, est non commodo luctus, nisi erat ”</p>
+                <p class="quoteMan">LESALE CHRISTOPER, PINTEREST</p>
+            </div>
+
+            <div>
+                <img src="images/people/pizzacat4.jpeg" class="quoteimg">
+                <p class="smartQuote">“Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum. Duis mollis, est non commodo luctus, nisi erat ”</p>
+                <p class="quoteMan">LESALE CHRISTOPER, GOOGLE</p>
+            </div>
+
+            <div>
+                <img src="images/people/pizzacat5.jpg" class="quoteimg">
+                <p class="smartQuote">“Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum. Duis mollis, est non commodo luctus, nisi erat ”</p>
+                <p class="quoteMan">LESALE CHRISTOPER, GOOGLE</p>
+            </div>
+
+        </div>
     </div>
 </section>
 

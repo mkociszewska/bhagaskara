@@ -154,4 +154,22 @@ prevPerson.on("click", function(){
     }
 
     pictureHover();
+
+
+
+
+    //------------------------------------ QUOTE SLIDER ------------------------------------
+
+    var slider = $(".slide-container");
+
+    slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slide: 'div',
+        dots: true
+
+    });
+
 });
