@@ -137,3 +137,26 @@ $media-queries: true;
 @mixin transparentGrey($opacity) {
   background-color: rgba(86, 93, 103, $opacity);
 }
+
+@mixin buttonStyling {
+  background-color: $colorviolet;
+  padding: 2% 4%;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
+  -moz-box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
+  box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
+  vertical-align: bottom;
+  color: #fff;
+}
+
+@mixin head2 {
+    @include fontLato('existencelight', 2rem, #676767, none);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
+    vertical-align: middle;
+    span {
+      color: $colorviolet;
+    }
+}

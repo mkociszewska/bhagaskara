@@ -120,7 +120,7 @@ header {
     margin-top: 19%;
 
     .col-2 {
-      background-image: url("../images/Shape%202.svg");
+      background-image: url("../images/Shape2.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: 98%;
@@ -129,6 +129,12 @@ header {
       color: white;
       position: relative;
       vertical-align: middle;
+
+      &:hover {
+        background-image: url("../images/icons/violet.svg");
+        background-size: 98%;
+
+      }
     }
 
     img {
@@ -137,7 +143,7 @@ header {
       margin-right: auto;
       //padding-top: 80%;
       position: absolute;
-      top: 20%;
+      top: 30%;
       width: 40%;
       left: 30%;
 
@@ -154,7 +160,7 @@ header {
   }
 
   .scroller {
-    background-image: url("../images/Shape%202.svg");
+    background-image: url("../images/Shape2.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 10%;
@@ -287,13 +293,19 @@ header {
 
   h1 {
     @include fontLato($icon-font, 3rem, #ccd0d2, Uppercase);
-    background-image: url('../images/Shape%202.svg');
+    background-image: url('../images/Shape2.svg');
     background-position: center;
     background-repeat: no-repeat;
     stroke: #ccd0d2;
     background-size: 80%;
     padding-top: 50%;
     padding-bottom: 50%;
+    //transition: 1s;
+
+    &:hover {
+      @include fontLato($icon-font, 3rem, $colorviolet, Uppercase);
+      background-image: url("../images/Shape2violet.svg");
+    }
   }
 
   h3 {
@@ -321,15 +333,10 @@ header {
     position: relative;
   }
 
-  h2{
-
-    @include fontLato('existencelight', 2rem, #676767, none);
-    text-align: center;
-    margin-bottom: 4rem;
-    span {
-      color: $colorviolet;
-    }
+  h2 {
+    @include head2;
   }
+
 
   .col-7 {
     //height: 20rem;
@@ -349,18 +356,11 @@ header {
     }
 
     button {
-      background-color: $colorviolet;
-      padding: 2% 4%;
-      border: none;
-      border-radius: 5px;
-      -webkit-box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
-      -moz-box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
-      box-shadow: 0px 4px 0px 0px rgba(107,64,104,1);
-      vertical-align: bottom;
       display: inline;
-      color: #fff;
       position: absolute;
       bottom: 5px;
+      @include buttonStyling;
+
     }
   }
 }
@@ -378,7 +378,7 @@ header {
   h1{
     @include fontLato($icon-font, 3rem, #fff, Uppercase);
     text-align: center;
-    background-image: url('../images/Shape%202.svg');
+    background-image: url('../images/Shape2.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 15%;
@@ -395,15 +395,8 @@ header {
 //------------------------------------OUR TEAM------------------------------------
 
 .our_team {
-  h2{
-    @include fontLato('existencelight', 2rem, #676767, none);
-    text-align: center;
-    margin-bottom: 3.5rem;
-    margin-top: 3.5rem;
-    vertical-align: middle;
-    span {
-      color: $colorviolet;
-    }
+  h2 {
+    @include head2;
   }
 
 
@@ -417,7 +410,7 @@ header {
       display: inline-block;
 
       img {
-        width: 100%;
+        width: 50%;
       }
     }
   }
@@ -478,16 +471,10 @@ header {
 
 .our_skills {
 
-  h2{
-    @include fontLato('existencelight', 2rem, #676767, none);
-    text-align: center;
-    margin-bottom: 3.5rem;
-    margin-top: 3.5rem;
-    vertical-align: middle;
-    span {
-      color: $colorviolet;
-    }
+  h2 {
+    @include head2;
   }
+
 
   .grid-container {
     width: 90%;
@@ -495,7 +482,8 @@ header {
 
     p {
       font-family: Helvetica, Arial, sans-serif;
-      font-weight: 500;
+      text-transform: uppercase;
+      font-weight: 600;
       font-size: 0.75rem;
       margin-bottom: 4%;
     }
@@ -626,14 +614,7 @@ header {
     }
   }
   h2 {
-    @include fontLato('existencelight', 2rem, #676767, none);
-    text-align: center;
-    margin-bottom: 3.5rem;
-    margin-top: 3.5rem;
-    vertical-align: middle;
-    span {
-      color: $colorviolet;
-    }
+    @include head2;
   }
 
   .project {
@@ -692,10 +673,79 @@ header {
       @include fontLato($font-family, 0.8rem, $colorgrey, none);
     }
   }
+
+  .basicbutton {
+    margin-left: 44%;
+    @include buttonStyling;
+  }
 }
 
 
 //------------------------------------ CONTACT ------------------------------------
 
+.getInTouch {
+  margin: 2rem 0;
 
+
+  h2 {
+    @include head2;
+  }
+
+  .formInputs {
+    display: block;
+
+    input{
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      @include fontLato($font-family, 0.8rem, black, none);
+
+      &:focus {
+        outline: 1px solid $colorviolet;
+      }
+    }
+
+    .yourmessage {
+      height: 180px;
+    }
+
+    button {
+      @include buttonStyling;
+    }
+  }
+
+  .adress {
+    padding: 1rem;
+
+    p{
+      @include fontLato($font-family, 1rem, black, none);
+      margin-bottom: 1rem;
+    }
+
+    & :nth-child(2) {
+      @include fontLato($bebasbold, 1.3rem, black, none);
+      margin: 3rem 0;
+    }
+  }
+
+  a {
+    img {
+      width: 10%;
+    }
+  }
+
+}
 //------------------------------------ FOOTER ------------------------------------
+
+footer {
+  padding: 2rem 0;
+  border: 2px solid green;
+  text-align: center;
+
+
+  img {
+    text-align: center;
+  }
+}
