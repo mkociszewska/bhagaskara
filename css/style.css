@@ -269,14 +269,14 @@ header {
     background-size: cover;
   }
 }
-@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 414px) {
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 667px) {
   header {
-    padding-bottom: 170%;
+    padding-bottom: 135%;
   }
 }
 @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 414px) {
   header {
-    padding-bottom: 230%;
+    padding-bottom: 200%;
   }
 }
 header h3 {
@@ -335,6 +335,12 @@ header .header-nav .headerIcon:hover {
     padding-bottom: 54%;
   }
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 667px) {
+  header .header-nav .headerIcon {
+    padding-bottom: 33%;
+    background-size: 61%;
+  }
+}
 header .header-nav img {
   display: block;
   margin-left: auto;
@@ -346,9 +352,16 @@ header .header-nav img {
 }
 @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 414px) {
   header .header-nav img {
-    width: 55%;
+    top: 18%;
+    width: 39%;
+    left: 31%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 667px) {
+  header .header-nav img {
     top: 26%;
-    left: 23%;
+    width: 30%;
+    left: 35%;
   }
 }
 header .header-nav .topnav {
@@ -478,7 +491,17 @@ header .scroller img {
   text-align: center;
   height: 40rem;
 }
-.merits .col-3 {
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 414px) {
+  .merits {
+    height: 51rem;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 667px) {
+  .merits {
+    height: 60rem;
+  }
+}
+.merits .grey {
   margin-top: 10%;
 }
 .merits h1 {
@@ -503,14 +526,13 @@ header .scroller img {
 }
 @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 414px) {
   .merits h1 {
-    background-size: 120%;
+    background-size: 90%;
     font-size: 2rem;
   }
 }
-@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 480px) and (min-width: 414px) {
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 667px) {
   .merits h1 {
-    background-size: 120%;
-    font-size: 2rem;
+    padding-bottom: 39%;
   }
 }
 .merits h3 {
@@ -519,6 +541,16 @@ header .scroller img {
   color: #676767;
   text-transform: lowercase;
   margin-bottom: 25%;
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 414px) {
+  .merits h3 {
+    font-size: 0.8rem;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 667px) {
+  .merits h3 {
+    margin-bottom: 12%;
+  }
 }
 .merits p {
   font-family: "latoregular";

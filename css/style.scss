@@ -81,12 +81,12 @@ header {
     background-size: cover;
   }
 
-  @include bp(iphone) {
-    padding-bottom: 170%;
+  @include bp(iphone5-landscape) {
+    padding-bottom: 135%;
   }
 
   @include bp(iphone-portrait) {
-    padding-bottom: 230%;
+    padding-bottom: 200%;
   }
 
   h3 {
@@ -146,12 +146,13 @@ header {
 
       }
 
-      //@include bp(iphone) {
-      //  padding-bottom: 69%;
-      //}
-
       @include bp(iphone-portrait) {
         padding-bottom: 54%;
+      }
+
+      @include bp(iphone5-landscape) {
+        padding-bottom: 33%;
+        background-size: 61%;
       }
     }
 
@@ -172,9 +173,15 @@ header {
       //}
 
       @include bp(iphone-portrait) {
-        width: 55%;
+        top: 18%;
+        width: 39%;
+        left: 31%;
+      }
+
+      @include bp(iphone5-landscape) {
         top: 26%;
-        left: 23%;
+        width: 30%;
+        left: 35%;
       }
     }
 
@@ -351,7 +358,15 @@ header {
   text-align: center;
   height: 40rem;
 
-  .col-3 {
+  @include bp(iphone-portrait) {
+    height: 51rem;
+  }
+
+  @include bp(iphone5-landscape) {
+    height: 60rem;
+  }
+
+  .grey {
     margin-top: 10%;
   }
 
@@ -372,19 +387,31 @@ header {
     }
 
     @include bp(iphone-portrait) {
-      background-size: 120%;
+      background-size: 90%;
       font-size: 2rem;
     }
 
-    @include bp(iphone) {
-      background-size: 120%;
-      font-size: 2rem;
+    @include bp(iphone5-landscape) {
+      padding-bottom: 39%;
     }
+
+    //@include bp(iphone) {
+    //  background-size: 120%;
+    //  font-size: 2rem;
+    //}
   }
 
   h3 {
     @include fontLato($font-family-second, 1rem, #676767, lowercase);
     margin-bottom: 25%;
+
+    @include bp(iphone-portrait) {
+      font-size: 0.8rem;
+    }
+
+    @include bp(iphone5-landscape) {
+      margin-bottom: 12%;
+    }
   }
 
   p {

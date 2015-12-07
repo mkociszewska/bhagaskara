@@ -35,11 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setClick();
 
 
-    //------------------------------------HEADER PHONE------------------------------------
+    //------------------------------------HEADER and GREY SECTION PHONE------------------------------------
 
     var headerNav = $(".header-nav");
     var headerNavIcons = headerNav.children();
     var topNav = $(".topnav");
+    var greyDivs = $(".grey");
 
     //console.log(headerNavIcons);
 
@@ -48,11 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if ($(window).width() < 700) {
             $(headerNavIcons).removeClass("col-2").addClass("col-6");
             $(topNav).removeClass("topnav").addClass("col-6");
+            $(greyDivs).removeClass("col-3").addClass("col-6");
         }
 
     }
 
     wrapIcons();
+
+
+
+
 
 
     //------------------------------------STICKY MENU------------------------------------
