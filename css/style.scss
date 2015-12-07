@@ -27,6 +27,10 @@
   width: 80%;
   border: 1px solid pink;
   margin: auto;
+
+  @include bp(iphone) {
+    width: 90%
+  }
 }
 
 
@@ -70,7 +74,7 @@ header {
   background-repeat: no-repeat;
   height: 0;
   width: 100%;
-  padding-bottom: 66%;
+  padding-bottom: 53%;
   text-align: center;
 
   @include bp(large-screen) {
@@ -81,12 +85,16 @@ header {
     padding-bottom: 170%;
   }
 
+  @include bp(iphone-portrait) {
+    padding-bottom: 230%;
+  }
+
   h3 {
     font-family: existencelight;
-    font-size: 5em;
+    font-size: 3.5rem;
     color: white;
-    padding-top: 5%;
-    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-bottom: 2%;
 
     span {
       color: #9f449b;
@@ -94,32 +102,34 @@ header {
 
 
     @include bp(iphone) {
-      font-size: 1.8rem;
+      font-size: 3rem;
     }
 
     @include bp(iphone-portrait) {
-      font-size: 1.8rem;
+      font-size: 3rem;
+      padding-top: 6%;
     }
 
   }
+
   h4 {
     font-family: $font-family;
     color: white;
-    font-size: 2.5em;
+    font-size: 1.4rem;
   }
 
   p {
     font-family: $font-family;
     color: white;
-    font-size: 1.3em;
-    padding: 5%;
+    font-size: 1rem;
+    padding: 2% 4%;
   }
 
   .header-nav {
     border: 1px solid blue;
-    margin-top: 19%;
+    margin-top: 14%;
 
-    .col-2 {
+    .headerIcon {
       background-image: url("../images/Shape2.svg");
       background-position: center;
       background-repeat: no-repeat;
@@ -135,6 +145,14 @@ header {
         background-size: 98%;
 
       }
+
+      //@include bp(iphone) {
+      //  padding-bottom: 69%;
+      //}
+
+      @include bp(iphone-portrait) {
+        padding-bottom: 54%;
+      }
     }
 
     img {
@@ -147,10 +165,21 @@ header {
       width: 40%;
       left: 30%;
 
+      //@include bp(iphone) {
+      //  width: 55%;
+      //  top: 26%;
+      //  left: 23%;
+      //}
+
+      @include bp(iphone-portrait) {
+        width: 55%;
+        top: 26%;
+        left: 23%;
+      }
     }
 
     .topnav {
-      margin-top: -16%;
+      margin-top: -15%;
 
       img {
         top: 30%;
@@ -163,9 +192,9 @@ header {
     background-image: url("../images/Shape2.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 10%;
+    background-size: 6%;
     border: 1px solid orangered;
-    padding-bottom: 15%;
+    padding-bottom: 8%;
     color: white;
     position: relative;
     vertical-align: middle;
@@ -175,7 +204,7 @@ header {
       margin-left: auto;
       margin-right: auto;
       position: absolute;
-      top: 44%;
+      top: 37%;
       width: 3%;
       left: 48.55%;
 
@@ -197,6 +226,16 @@ header {
 
 .notVisible {
   display: none;
+
+  //@include bp(iphone) {
+  //  display: block;
+  //}
+  //
+  //@include bp(iphone-portrait) {
+  //  display: block;
+  //}
+
+
 }
 
 .menuBtn span {
@@ -204,7 +243,7 @@ header {
   width: 20px;
   height: 5px;
   margin: 4px 0;
-  background: #fff;
+  background: $colorviolet;
   border-radius: 30%;
   //z-index: 99;
 }
@@ -216,10 +255,16 @@ header {
   a {
     text-decoration: none;
     color: #fff;
+    display: block;
   }
 
   ul {
-    padding: 19%;
+    padding: 5%;
+    //-webkit-padding-start: 0px;
+    //-webkit-margin-before: 0em;
+    //-webkit-margin-after: 0em;
+    //-webkit-margin-start: 0px;
+    //-webkit-margin-end: 0px;
   }
 
   li {
@@ -227,12 +272,17 @@ header {
     list-style: none;
     color: #fff;
     text-transform: uppercase;
+    text-align: left;
     font-size: 0.8rem;
+
+    @include bp(iphone-portrait) {
+      font-size: 2rem;
+    }
   }
 }
 
 .mobileMenu {
-  width: 80%;
+  width: 70%;
   @include transparentViolet(0.9);
   overflow: visible;
   position: fixed;
@@ -246,16 +296,30 @@ header {
 .sticky_menu {
   background-color: #fff;
   //height: 20%;
-  padding: 3% 0%;
+  padding: 1% 0%;
 
   a {
+    @include bp(iphone) {
+      display: none;
+    }
 
+    @include bp(iphone-portrait) {
+      display: none;
+    }
   }
 
   ul {
     vertical-align: middle;
     text-align: right;
     height: 100%;
+
+    @include bp(iphone) {
+      display: none;
+    }
+
+    @include bp(iphone-portrait) {
+      display: none;
+    }
   }
 
   li {
@@ -306,15 +370,25 @@ header {
       @include fontLato($icon-font, 3rem, $colorviolet, Uppercase);
       background-image: url("../images/Shape2violet.svg");
     }
+
+    @include bp(iphone-portrait) {
+      background-size: 120%;
+      font-size: 2rem;
+    }
+
+    @include bp(iphone) {
+      background-size: 120%;
+      font-size: 2rem;
+    }
   }
 
   h3 {
-    @include fontLato($latothin, 1rem, #676767, lowercase);
+    @include fontLato($font-family-second, 1rem, #676767, lowercase);
     margin-bottom: 25%;
   }
 
   p {
-    @include fontLato($latothin, 0.8rem, #676767, lowercase);
+    @include fontLato($font-family-second, 0.8rem, #676767, lowercase);
     padding: 0% 10% 15% 10%;
   }
 
@@ -325,7 +399,6 @@ header {
 
 .about_us {
   background-color: #fff;
-  padding-top: 4rem;
   padding-bottom: 4rem;
 
 
@@ -349,8 +422,8 @@ header {
     //height: 20rem;
 
     p {
-      @include fontLato($latolight, 0.7rem, #676767, none);
-      line-height: 180%;
+      @include fontLato($font-family-second, 0.8rem, #676767, none);
+      line-height: 170%;
       padding-left: 4%;
       opacity: 0.5;
     }
@@ -446,7 +519,7 @@ header {
 
       p {
         text-align: center;
-        @include fontLato($font-family, 0.8rem, #484848, none);
+        @include fontLato($font-family-second, 0.8rem, #484848, none);
         margin-bottom: 2rem;
 
         span {

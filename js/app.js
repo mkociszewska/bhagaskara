@@ -3,23 +3,19 @@
  */
 document.addEventListener('DOMContentLoaded', function() {
 
-
-    //hamburger przenieś do sassa - display: none itd
     function setMenu() {
 
 
         function setHam(){
-            if ($(window).width() < 700) {
-                $('.header-nav').hide();
-                //$('.fusce').hide();
-                $('.vestibulum').hide();
+            if ($(window).width() < 1000) {
+                $('.sticky_list').hide();
                 $('.menuBtn').show();
+                $('.stickylogo').hide();
             } else {
-                $('.header-nav').show();
-                //$('.fusce').show();
-                $('.vestibulum').show();
+                $('.sticky_list').show();
                 $('.menuBtn').hide();
                 $('.mobileMenu').hide();
+                $('.stickylogo').show();
             }
         }
         setHam();
@@ -38,6 +34,25 @@ document.addEventListener('DOMContentLoaded', function() {
     setMenu();
     setClick();
 
+
+    //------------------------------------HEADER PHONE------------------------------------
+
+    var headerNav = $(".header-nav");
+    var headerNavIcons = headerNav.children();
+    var topNav = $(".topnav");
+
+    //console.log(headerNavIcons);
+
+    function wrapIcons() {
+
+        if ($(window).width() < 700) {
+            $(headerNavIcons).removeClass("col-2").addClass("col-6");
+            $(topNav).removeClass("topnav").addClass("col-6");
+        }
+
+    }
+
+    wrapIcons();
 
 
     //------------------------------------STICKY MENU------------------------------------

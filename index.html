@@ -22,28 +22,6 @@
             <div class="row jumbotron">
                 <div class="col-12">
 
-                    <!--mobile nav-->
-                    <div class="mobileNav">
-                        <div class="menuBtn notVisible">
-                            <div></div>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="mobileMenu notVisible">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
                     <h3>Bhaga<span>skara.</span></h3>
                     <h4 class="fusce">Fusce rutrum pretium lorem semper nulla.</h4>
                     <p class="vestibulum">Vestibulum ornare cursus nisl, fermentum tincidunt libero pretium et. Maecenas interdum ligula non
@@ -54,12 +32,12 @@
 
             <div class="row header-nav">
 
-                <div class="col-2"><img src="images/icons/settings.svg"/></div>
-                <div class="col-2"><img src="images/icons/user.svg"/></div>
-                <div class="topnav col-2"><img src="images/icons/bubble.svg"/></div>
-                <div class="topnav col-2"><img src="images/icons/photo.svg"/></div>
-                <div class="col-2"><img src="images/icons/pen.svg"/></div>
-                <div class="col-2"><img src="images/icons/paperplane.svg"/></div>
+                <div class="col-2 headerIcon"><img src="images/icons/settings.svg"/></div>
+                <div class="col-2 headerIcon"><img src="images/icons/user.svg"/></div>
+                <div class="topnav col-2 headerIcon"><img src="images/icons/bubble.svg"/></div>
+                <div class="topnav col-2 headerIcon"><img src="images/icons/photo.svg"/></div>
+                <div class="col-2 headerIcon"><img src="images/icons/pen.svg"/></div>
+                <div class="col-2 headerIcon"><img src="images/icons/paperplane.svg"/></div>
 
             </div>
 
@@ -73,13 +51,35 @@
     </div>
 </header>
 
-<!--tutaj sticky menu-->
+<!--sticky menu-->
 <section class="sticky_menu">
     <div class="grid-container">
         <div class="main_width">
             <div class="row">
 
-                <a href="/" class="col-3"><img src="images/Bhagaskara_03.png"></a>
+                <!--mobile nav-->
+                <div class="mobileNav">
+                    <div class="menuBtn notVisible">
+                        <div></div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="mobileMenu notVisible">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="/" class="col-3 stickylogo"><img src="images/Bhagaskara_03.png"></a>
 
                 <ul class="sticky_list col-9">
                     <li>home</li>
@@ -96,7 +96,7 @@
 </section>
 
 
-<!--tutaj szara sekcja-->
+<!--------------------------- tutaj szara sekcja ----------------------- -->
 
 <section class="merits">
     <div class="main_width">
