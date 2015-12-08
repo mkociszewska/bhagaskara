@@ -113,7 +113,7 @@ var personId = $(allPeople[currentPerson]);
     changeDisplay();
 
 nextPerson.on("click", function(){
-
+    //for screens:
     if ($(window).width() > 700) {
         currentPerson++;
 
@@ -125,6 +125,7 @@ nextPerson.on("click", function(){
 
        animatebars($(allPeople[currentPerson]));
 
+    //for phones:
     } else {
 
         personId.addClass('visibility');
@@ -148,6 +149,7 @@ nextPerson.on("click", function(){
 
 prevPerson.on("click", function(){
 
+    //for screens:
     if ($(window).width() > 700) {
         currentPerson--;
 
@@ -160,6 +162,7 @@ prevPerson.on("click", function(){
 
     animatebars($(allPeople[currentPerson]));
 
+    //for phones:
     } else {
 
         personId.addClass('visibility');
@@ -180,28 +183,6 @@ prevPerson.on("click", function(){
     }
 });
 
-//-------phone
-
-    //function phoneAboutUs() {
-    //
-    //    if ($(window).width() < 700) {
-    //        nextPerson.on("click", function() {
-    //            allPeople.eq(currentPerson).fadeOut(200, function () {
-    //                allPeople.eq(currentPerson).fadeIn(200);
-    //            });
-    //
-    //            currentPerson++;
-    //
-    //            if(currentPerson >= allPeople.length) {
-    //                currentPerson = 0;
-    //            }
-    //
-    //
-    //        })
-    //    }
-    //}
-    //
-    //phoneAboutUs();
 
     //------------------------------------ PROGRESS BAR ------------------------------------
 

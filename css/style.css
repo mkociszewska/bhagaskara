@@ -964,6 +964,16 @@ header .scroller img {
   text-align: center;
   margin-bottom: 2%;
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
+  .portfolio .buttons {
+    width: 95%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+  .portfolio .buttons {
+    width: 95%;
+  }
+}
 .portfolio .buttons button {
   font-family: "latoregular";
   font-size: 1rem;
@@ -976,6 +986,12 @@ header .scroller img {
   margin-left: 2%;
   margin-right: 2%;
   width: 5rem;
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
+  .portfolio .buttons button {
+    width: 3rem;
+    font-size: 0.75rem;
+  }
 }
 .portfolio .buttons button:hover {
   border: 1px solid #9f449b;
@@ -1052,7 +1068,7 @@ header .scroller img {
   color: #fff;
   text-transform: Uppercase;
   vertical-align: middle;
-  background-color: rgba(86, 93, 103, 0.6);
+  background-color: rgba(86, 93, 103, 0.9);
 }
 .portfolio .project .picture .bigImage {
   background-color: rgba(86, 93, 103, 0.8);
@@ -1073,11 +1089,41 @@ header .scroller img {
   margin-top: -150px;
   /*subtract by half height*/
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
+  .portfolio .project .picture .bigImage img {
+    width: 84%;
+    top: 61%;
+    left: 23%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+  .portfolio .project .picture .bigImage img {
+    width: 70%;
+    top: 61%;
+    left: 30%;
+  }
+}
 .portfolio .project h4 {
   font-family: "latohairline";
   font-size: 1.2rem;
   color: black;
   text-transform: none;
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
+  .portfolio .project h4 {
+    font-family: "latoregular";
+    font-size: 0.8rem;
+    color: black;
+    text-transform: none;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+  .portfolio .project h4 {
+    font-family: "latoregular";
+    font-size: 0.8rem;
+    color: black;
+    text-transform: none;
+  }
 }
 .portfolio .project p {
   font-family: "latohairline";
@@ -1085,8 +1131,25 @@ header .scroller img {
   color: #565d67;
   text-transform: none;
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
+  .portfolio .project p {
+    font-family: "latoregular";
+    font-size: 0.8rem;
+    color: #565d67;
+    text-transform: none;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+  .portfolio .project p {
+    font-family: "latoregular";
+    font-size: 0.8rem;
+    color: #565d67;
+    text-transform: none;
+  }
+}
 .portfolio .basicbutton {
   margin-left: 44%;
+  margin-top: 5%;
   background-color: #9f449b;
   padding: 2% 4%;
   border: none;
@@ -1096,6 +1159,11 @@ header .scroller img {
   box-shadow: 0px 4px 0px 0px #6b4068;
   vertical-align: bottom;
   color: #fff;
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
+  .portfolio .basicbutton {
+    margin-left: 33%;
+  }
 }
 
 .getInTouch {

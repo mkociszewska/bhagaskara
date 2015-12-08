@@ -620,13 +620,8 @@ header {
   .skillDiv {
     padding: 2em;
 
-    @include bp(iphone-portrait) {
-      padding: 0.8em;
-    }
-
-    @include bp(iphone5-landscape) {
-      padding: 0.8em;
-    }
+    @include bp(iphone-portrait) { padding: 0.8em;  }
+    @include bp(iphone5-landscape) {  padding: 0.8em;  }
 
 
     .progress_grey {
@@ -731,6 +726,9 @@ header {
     text-align: center;
     margin-bottom: 2%;
 
+    @include bp(iphone-portrait) {width: 95%;}
+    @include bp(iphone5-landscape) {width: 95%;}
+
     button {
       @include fontLato($font-family-second, 1rem, black, Uppercase);
       //padding: 0.5% 1%;
@@ -742,6 +740,8 @@ header {
       margin-right: 2%;
       width: 5rem;
 
+      @include bp(iphone-portrait) {width: 3rem; font-size: 0.75rem;}
+
       &:hover {
         border: 1px solid $colorviolet;
         background-color: $colorviolet;
@@ -749,6 +749,7 @@ header {
       }
     }
   }
+
   h2 {
     @include head2;
     @include bp(iphone-portrait) {@include headPhone;}
@@ -775,10 +776,9 @@ header {
         height: 99%;
         padding: 1%;
         text-align: center;
-        //font-size: 15rem;
         @include fontLato($font-family, 15rem, #fff, Uppercase);
         vertical-align: middle;
-        @include transparentGrey(0.6);
+        @include transparentGrey(0.9);
       }
 
       .bigImage {
@@ -798,6 +798,9 @@ header {
           left: 50%;
           margin-left: -15%; /*subtract by half width*/
           margin-top: -150px; /*subtract by half height*/
+
+          @include bp(iphone-portrait) {width: 84%; top: 61%; left: 23%; }
+          @include bp(iphone5-landscape) {width: 70%; top: 61%; left: 30%; }
         }
       }
 
@@ -805,16 +808,23 @@ header {
 
     h4 {
       @include fontLato($font-family, 1.2rem, black, none);
+      @include bp(iphone-portrait) {@include fontLato($font-family-second, 0.8rem, black, none);}
+      @include bp(iphone5-landscape) {@include fontLato($font-family-second, 0.8rem, black, none);}
     }
 
     p {
       @include fontLato($font-family, 0.8rem, $colorgrey, none);
+      @include bp(iphone-portrait) {@include fontLato($font-family-second, 0.8rem, $colorgrey, none);}
+      @include bp(iphone5-landscape) {@include fontLato($font-family-second, 0.8rem, $colorgrey, none);}
     }
   }
 
   .basicbutton {
     margin-left: 44%;
+    margin-top: 5%;
     @include buttonStyling;
+    @include bp(iphone-portrait) {margin-left: 33%;}
+    //@include bp(iphone5-landscape) {;}
   }
 }
 
