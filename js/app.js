@@ -35,26 +35,35 @@ document.addEventListener('DOMContentLoaded', function() {
     setClick();
 
 
-    //------------------------------------HEADER and GREY SECTION PHONE------------------------------------
+    //------------------------------------HEADER, GREY SECTION, ABOUT US, OUR SKILLS - PHONE------------------------------------
 
     var headerNav = $(".header-nav");
     var headerNavIcons = headerNav.children();
     var topNav = $(".topnav");
     var greyDivs = $(".grey");
+    var mockup = $(".mockup");
+    var aboutUsText = $(".aboutText");
+    var skillsDiv = $(".skillDiv");
+    var counter = $(".counter");
+
 
     //console.log(headerNavIcons);
 
-    function wrapIcons() {
+    function changeGrid() {
 
         if ($(window).width() < 700) {
             $(headerNavIcons).removeClass("col-2").addClass("col-6");
             $(topNav).removeClass("topnav").addClass("col-6");
             $(greyDivs).removeClass("col-3").addClass("col-6");
+            $(mockup).removeClass("col-7").addClass("col-12");
+            $(aboutUsText).removeClass("col-5").addClass("col-12");
+            $(skillsDiv).removeClass("col-6").addClass("col-12");
+            $(counter).removeClass("col-3").addClass("col-6");
         }
 
     }
 
-    wrapIcons();
+    changeGrid();
 
 
 
@@ -94,36 +103,105 @@ var personId = $(allPeople[currentPerson]);
 
     personId.removeClass('opacity');
 
+    function changeDisplay() {
+        if ($(window).width() < 700) {
+            personId.removeClass('visibility');
+        } else {
+            allPeople.removeClass('visibility');
+        }
+    }
+    changeDisplay();
+
 nextPerson.on("click", function(){
-    //$(allPeople[currentPerson]).removeClass('opacity');
-    currentPerson++;
+
+    if ($(window).width() > 700) {
+        currentPerson++;
+
+            if(currentPerson >= allPeople.length) {
+                currentPerson = 0;
+            }
+        $(allPeople).addClass('opacity');
+        $(allPeople[currentPerson]).removeClass('opacity');
+
+       animatebars($(allPeople[currentPerson]));
+
+    } else {
+
+        personId.addClass('visibility');
+        allPeople.removeClass('opacity');
+
+        allPeople.eq(currentPerson).fadeOut(300, function() {
+            allPeople.hide();
+            allPeople.eq(currentPerson).fadeIn(300);
+        });
+
+        currentPerson++;
 
         if(currentPerson >= allPeople.length) {
             currentPerson = 0;
         }
-    $(allPeople).addClass('opacity');
-    $(allPeople[currentPerson]).removeClass('opacity');
 
-    animatebars($(allPeople[currentPerson]));
-
+        animatebars($(allPeople[currentPerson]));
+    }
 });
 
 
 prevPerson.on("click", function(){
 
-    currentPerson--;
+    if ($(window).width() > 700) {
+        currentPerson--;
 
-    if(currentPerson < 0) {
-        currentPerson = allPeople.length-1;
-    }
+        if(currentPerson < 0) {
+            currentPerson = allPeople.length-1;
+         }
 
     $(allPeople).addClass('opacity');
     $(allPeople[currentPerson]).removeClass('opacity');
 
     animatebars($(allPeople[currentPerson]));
 
+    } else {
+
+        personId.addClass('visibility');
+        allPeople.removeClass('opacity');
+
+        allPeople.eq(currentPerson).fadeOut(300, function() {
+            allPeople.hide();
+            allPeople.eq(currentPerson).fadeIn(300);
+        });
+
+        currentPerson--;
+
+        if(currentPerson < 0) {
+            currentPerson = allPeople.length-1;
+        }
+
+        animatebars($(allPeople[currentPerson]));
+    }
 });
 
+//-------phone
+
+    //function phoneAboutUs() {
+    //
+    //    if ($(window).width() < 700) {
+    //        nextPerson.on("click", function() {
+    //            allPeople.eq(currentPerson).fadeOut(200, function () {
+    //                allPeople.eq(currentPerson).fadeIn(200);
+    //            });
+    //
+    //            currentPerson++;
+    //
+    //            if(currentPerson >= allPeople.length) {
+    //                currentPerson = 0;
+    //            }
+    //
+    //
+    //        })
+    //    }
+    //}
+    //
+    //phoneAboutUs();
 
     //------------------------------------ PROGRESS BAR ------------------------------------
 
@@ -131,7 +209,7 @@ prevPerson.on("click", function(){
         //var skill = $(".skill");
 
 
-        console.log(skill);
+        //console.log(skill);
 
         var webpercent = skill.data('webpercent');
         var graphicpercent = skill.data('graphicpercent');
