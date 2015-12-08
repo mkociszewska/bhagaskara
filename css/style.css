@@ -182,7 +182,7 @@
   border: 1px solid pink;
   margin: auto;
 }
-@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 321px) {
   .main_width {
     width: 90%;
   }
@@ -279,6 +279,16 @@ header {
     padding-bottom: 222%;
   }
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 375px) and (min-width: 321px) {
+  header {
+    padding-bottom: 175%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  header {
+    padding-bottom: 103%;
+  }
+}
 header h3 {
   font-family: existencelight;
   font-size: 3.5rem;
@@ -310,6 +320,16 @@ header .header-nav {
   border: 1px solid blue;
   margin-top: 14%;
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  header .header-nav {
+    margin-top: 1%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 375px) and (min-width: 321px) {
+  header .header-nav {
+    margin-top: 0;
+  }
+}
 header .header-nav .headerIcon {
   background-image: url("../images/Shape2.svg");
   background-position: center;
@@ -336,6 +356,12 @@ header .header-nav .headerIcon:hover {
     background-size: 61%;
   }
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  header .header-nav .headerIcon {
+    padding-bottom: 21%;
+    background-size: 37%;
+  }
+}
 header .header-nav img {
   display: block;
   margin-left: auto;
@@ -350,6 +376,13 @@ header .header-nav img {
     top: 26%;
     width: 30%;
     left: 35%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  header .header-nav img {
+    top: 15%;
+    width: 22%;
+    left: 39%;
   }
 }
 header .header-nav .topnav {
@@ -430,7 +463,7 @@ header .scroller img {
   background-color: #fff;
   padding: 1% 0%;
 }
-@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 321px) {
   .sticky_menu a {
     display: none;
   }
@@ -445,7 +478,7 @@ header .scroller img {
   text-align: right;
   height: 100%;
 }
-@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 321px) {
   .sticky_menu ul {
     display: none;
   }
@@ -489,8 +522,28 @@ header .scroller img {
     height: 60rem;
   }
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 375px) and (min-width: 321px) {
+  .merits {
+    height: 52rem;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .merits {
+    height: 36rem;
+  }
+}
 .merits .grey {
   margin-top: 10%;
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 375px) and (min-width: 321px) {
+  .merits .grey {
+    margin-top: 5%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .merits .grey {
+    margin-top: 0;
+  }
 }
 .merits h1 {
   font-family: "Glyphter";
@@ -523,6 +576,14 @@ header .scroller img {
     padding-bottom: 39%;
   }
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .merits h1 {
+    font-size: 2rem;
+    background-size: 34%;
+    padding-top: 19%;
+    padding-bottom: 17%;
+  }
+}
 .merits h3 {
   font-family: "latoregular";
   font-size: 1rem;
@@ -538,6 +599,11 @@ header .scroller img {
 @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
   .merits h3 {
     margin-bottom: 12%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .merits h3 {
+    margin-bottom: 5%;
   }
 }
 .merits p {
@@ -568,8 +634,44 @@ header .scroller img {
 .about_us h2 span {
   color: #9f449b;
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
+  .about_us h2 {
+    font-family: "existencelight";
+    font-size: 1.7rem;
+    color: #676767;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    vertical-align: middle;
+  }
+  .about_us h2 span {
+    color: #9f449b;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+  .about_us h2 {
+    font-family: "existencelight";
+    font-size: 1.7rem;
+    color: #676767;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    vertical-align: middle;
+  }
+  .about_us h2 span {
+    color: #9f449b;
+  }
+}
 .about_us .mockup img {
   width: 98%;
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .about_us .mockup img {
+    width: 55%;
+    margin-left: 26%;
+  }
 }
 @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
   .about_us .mockup {
@@ -600,6 +702,12 @@ header .scroller img {
   .about_us .aboutText p {
     padding-left: 0;
     height: 11rem;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .about_us .aboutText p {
+    padding-left: 0;
+    height: 9rem;
   }
 }
 .about_us .aboutText button {
@@ -714,6 +822,11 @@ header .scroller img {
     width: 30%;
   }
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .our_team .violetArrows {
+    width: 30%;
+  }
+}
 .our_team .violetArrows a {
   width: 40%;
   display: inline-block;
@@ -731,6 +844,11 @@ header .scroller img {
     width: 80%;
   }
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .our_team .violetArrows a img {
+    width: 80%;
+  }
+}
 .our_team ul {
   padding-left: 0;
   text-align: center;
@@ -742,6 +860,11 @@ header .scroller img {
   }
 }
 @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+  .our_team ul {
+    margin-top: 1.5rem;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
   .our_team ul {
     margin-top: 1.5rem;
   }
@@ -762,6 +885,16 @@ header .scroller img {
     width: 100%;
   }
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .our_team ul li {
+    width: 100%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 375px) and (min-width: 321px) {
+  .our_team ul li {
+    width: 100%;
+  }
+}
 .our_team ul li a img {
   width: 70%;
   border-radius: 50%;
@@ -774,6 +907,11 @@ header .scroller img {
 @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
   .our_team ul li a img {
     width: 25%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .our_team ul li a img {
+    width: 20%;
   }
 }
 .our_team ul li h4 {
@@ -795,6 +933,12 @@ header .scroller img {
   .our_team ul li h4 {
     margin-top: 3%;
     margin-bottom: 3%;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+  .our_team ul li h4 {
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
 }
 .our_team ul li p {
@@ -1165,6 +1309,11 @@ header .scroller img {
     margin-left: 33%;
   }
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 375px) and (min-width: 321px) {
+  .portfolio .basicbutton {
+    margin-left: 36%;
+  }
+}
 
 .getInTouch {
   margin: 2rem 0;
@@ -1225,6 +1374,18 @@ header .scroller img {
   color: black;
   text-transform: none;
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
+  .getInTouch .formInputs input {
+    padding: 0.5rem;
+    border: 1px solid #565d67;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+  .getInTouch .formInputs input {
+    padding: 0.5rem;
+    border: 1px solid #565d67;
+  }
+}
 .getInTouch .formInputs input:focus {
   outline: 1px solid #9f449b;
 }
@@ -1242,8 +1403,23 @@ header .scroller img {
   vertical-align: bottom;
   color: #fff;
 }
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
+  .getInTouch .formInputs button {
+    margin-left: 33%;
+  }
+}
 .getInTouch .adress {
   padding: 1rem;
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
+  .getInTouch .adress {
+    padding: 1rem 0;
+  }
+}
+@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+  .getInTouch .adress {
+    padding: 1rem 0;
+  }
 }
 .getInTouch .adress p {
   font-family: "latohairline";

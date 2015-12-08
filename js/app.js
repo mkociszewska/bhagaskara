@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var aboutUsText = $(".aboutText");
     var skillsDiv = $(".skillDiv");
     var counter = $(".counter");
-
+    var formInputs = $(".formInputs");
+    var adress = $(".adress");
 
     //console.log(headerNavIcons);
 
@@ -59,8 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
             $(aboutUsText).removeClass("col-5").addClass("col-12");
             $(skillsDiv).removeClass("col-6").addClass("col-12");
             $(counter).removeClass("col-3").addClass("col-6");
+            $(formInputs).removeClass("col-6").addClass("col-12");
+            $(adress).removeClass("col-6").addClass("col-12");
         }
-
     }
 
     changeGrid();

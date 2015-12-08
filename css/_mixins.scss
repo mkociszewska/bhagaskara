@@ -42,6 +42,8 @@ $media-queries: true;
     $bp-iphone5-max: 568px;
     $bp-iphone-max: 480px;
     $bp-iphone-min: 321px;
+    $bp-iphone6-min: 375px;
+    $bp-iphone6-max: 669px;
     // **
     // --------------------
     // Options of screen breakpoints:
@@ -103,7 +105,8 @@ $media-queries: true;
       @media // iPhone 5 (landscape)
       handheld,
       only screen and (min-device-pixel-ratio: 2),
-      only screen and (max-width: #{$bp-iphone5-max}) and (min-width: #{$bp-iphone-min}){
+      only screen and (max-width: #{$bp-iphone5-max})
+      and (min-width: #{$bp-iphone-min}){
         @content;
       }
     }
@@ -111,7 +114,7 @@ $media-queries: true;
       @media // iPhone (portrait and landscape)
       handheld,
       only screen and (min-device-pixel-ratio: 2),
-      only screen and (max-width: #{$bp-iphone5-max})
+      only screen and (max-width: #{$bp-iphone6-max})
       and (min-width: #{$bp-iphone-min}) {
         @content;
       }
@@ -121,6 +124,24 @@ $media-queries: true;
       handheld,
       only screen and (min-device-pixel-ratio: 2),
       only screen and (max-width: #{$bp-iphone-min}) {
+        @content;
+      }
+    }
+    @if $point == iphone6-portrait {
+      @media // iPhone (portrait)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-iphone6-min})
+      and (min-width: #{$bp-iphone-min}) {
+        @content;
+      }
+    }
+    @if $point == iphone6-landscape {
+      @media // iPhone (portrait)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-iphone6-max})
+      and (min-width: 569px) {
         @content;
       }
     }

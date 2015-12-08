@@ -77,17 +77,11 @@ header {
   padding-bottom: 53%;
   text-align: center;
 
-  @include bp(large-screen) {
-    background-size: cover;
-  }
-
-  @include bp(iphone5-landscape) {
-    padding-bottom: 155%;
-  }
-
-  @include bp(iphone-portrait) {
-    padding-bottom: 222%;
-  }
+  @include bp(large-screen) {background-size: cover;}
+  @include bp(iphone5-landscape) {padding-bottom: 155%;}
+  @include bp(iphone-portrait) {padding-bottom: 222%;  }
+  @include bp(iphone6-portrait) {padding-bottom: 175%;  }
+  @include bp(iphone6-landscape) {padding-bottom: 103%;  }
 
   h3 {
     font-family: existencelight;
@@ -105,10 +99,7 @@ header {
     //  font-size: 3rem;
     //}
 
-    @include bp(iphone-portrait) {
-      font-size: 2.5rem;
-      padding-top: 6%;
-    }
+    @include bp(iphone-portrait) {font-size: 2.5rem; padding-top: 6%; }
 
   }
 
@@ -128,6 +119,9 @@ header {
   .header-nav {
     border: 1px solid blue;
     margin-top: 14%;
+    @include bp(iphone6-landscape) {margin-top: 1%;}
+    @include bp(iphone6-portrait) {margin-top: 0;}
+
 
     .headerIcon {
       background-image: url("../images/Shape2.svg");
@@ -145,15 +139,10 @@ header {
         background-size: 98%;
 
       }
-
-      @include bp(iphone-portrait) {
-        padding-bottom: 54%;
-      }
-
-      @include bp(iphone5-landscape) {
-        padding-bottom: 33%;
-        background-size: 61%;
-      }
+      @include bp(iphone-portrait) {padding-bottom: 54%;}
+      @include bp(iphone5-landscape) {padding-bottom: 33%; background-size: 61%;}
+      //@include bp(iphone6-portrait) {padding-bottom: 175%;  }
+      @include bp(iphone6-landscape) {padding-bottom: 21%; background-size: 37%;}
     }
 
     img {
@@ -166,23 +155,8 @@ header {
       width: 40%;
       left: 30%;
 
-      //@include bp(iphone) {
-      //  width: 55%;
-      //  top: 26%;
-      //  left: 23%;
-      //}
-
-      //@include bp(iphone-portrait) {
-      //  top: 18%;
-      //  width: 39%;
-      //  left: 31%;
-      //}
-
-      @include bp(iphone5-landscape) {
-        top: 26%;
-        width: 30%;
-        left: 35%;
-      }
+      @include bp(iphone5-landscape) {  top: 26%;  width: 30%;  left: 35%;  }
+      @include bp(iphone6-landscape) {top: 15%;  width: 22%;  left: 39%;  }
     }
 
     .topnav {
@@ -343,16 +317,15 @@ header {
   text-align: center;
   height: 40rem;
 
-  @include bp(iphone-portrait) {
-    height: 51rem;
-  }
-
-  @include bp(iphone5-landscape) {
-    height: 60rem;
-  }
+  @include bp(iphone-portrait) {  height: 51rem;  }
+  @include bp(iphone5-landscape) {  height: 60rem;  }
+  @include bp(iphone6-portrait) {  height: 52rem;  }
+  @include bp(iphone6-landscape) {  height: 36rem;  }
 
   .grey {
     margin-top: 10%;
+    @include bp(iphone6-portrait) {margin-top: 5%;}
+    @include bp(iphone6-landscape) { margin-top: 0;}
   }
 
   h1 {
@@ -371,14 +344,9 @@ header {
       background-image: url("../images/Shape2violet.svg");
     }
 
-    @include bp(iphone-portrait) {
-      background-size: 90%;
-      font-size: 2rem;
-    }
-
-    @include bp(iphone5-landscape) {
-      padding-bottom: 39%;
-    }
+    @include bp(iphone-portrait) {  background-size: 90%;  font-size: 2rem;  }
+    @include bp(iphone5-landscape) {  padding-bottom: 39%;  }
+    @include bp(iphone6-landscape) { font-size: 2rem;  background-size: 34%;  padding-top: 19%;  padding-bottom: 17% }
 
   }
 
@@ -386,13 +354,9 @@ header {
     @include fontLato($font-family-second, 1rem, #676767, lowercase);
     margin-bottom: 25%;
 
-    @include bp(iphone-portrait) {
-      font-size: 0.8rem;
-    }
-
-    @include bp(iphone5-landscape) {
-      margin-bottom: 12%;
-    }
+    @include bp(iphone-portrait) { font-size: 0.8rem; }
+    @include bp(iphone5-landscape) {  margin-bottom: 12%; }
+    @include bp(iphone6-landscape) {  margin-bottom: 5%; }
   }
 
   p {
@@ -416,23 +380,20 @@ header {
 
   h2 {
     @include head2;
+    @include bp(iphone-portrait) {@include headPhone;}
+    @include bp(iphone5-landscape) {@include headPhone;}
   }
 
 
   .mockup {
-    //height: 20rem;
+
     img {
       width: 98%;
+      @include bp(iphone6-landscape) { width: 55%;  margin-left: 26%;}
     }
 
-    @include bp(iphone-portrait) {
-      margin-bottom: 1rem;
-    }
-
-    @include bp(iphone5-landscape) {
-      margin-bottom: 1rem;
-
-    }
+    @include bp(iphone-portrait) {  margin-bottom: 1rem; }
+    @include bp(iphone5-landscape) { margin-bottom: 1rem; }
   }
 
   .aboutText {
@@ -444,15 +405,9 @@ header {
       padding-left: 4%;
       opacity: 0.5;
 
-      @include bp(iphone-portrait) {
-        padding-left: 0;
-        height: 13rem;
-      }
-
-      @include bp(iphone5-landscape) {
-        padding-left: 0;
-        height: 11rem;
-      }
+      @include bp(iphone-portrait) { padding-left: 0;  height: 13rem;  }
+      @include bp(iphone5-landscape) { padding-left: 0;  height: 11rem;  }
+      @include bp(iphone6-landscape) { padding-left: 0;  height: 9rem;  }
     }
 
     button {
@@ -516,6 +471,7 @@ header {
     text-align: center;
     @include bp(iphone-portrait) {width: 40%;}
     @include bp(iphone5-landscape) {width: 30%;}
+    @include bp(iphone6-landscape) {width: 30%;}
     a {
       width: 40%;
       display: inline-block;
@@ -524,6 +480,7 @@ header {
         width: 50%;
         @include bp(iphone-portrait) {width: 91%;}
         @include bp(iphone5-landscape) {width: 80%; }
+        @include bp(iphone6-landscape) {width: 80%; }
 
       }
 
@@ -537,6 +494,7 @@ header {
     margin-top: 3.5rem;
     @include bp(iphone-portrait) {margin-top: 1.5rem;}
     @include bp(iphone5-landscape) {margin-top: 1.5rem;}
+    @include bp(iphone6-landscape) {margin-top: 1.5rem;}
 
     li {
       display: inline-block;
@@ -546,6 +504,8 @@ header {
 
       @include bp(iphone-portrait) {width: 100%;}
       @include bp(iphone5-landscape) {width: 100%;}
+      @include bp(iphone6-landscape) {width: 100%;}
+      @include bp(iphone6-portrait) {width: 100%;}
 
       a {
         img {
@@ -553,6 +513,7 @@ header {
           border-radius: 50%;
           @include bp(iphone-portrait) {width: 60%;}
           @include bp(iphone5-landscape) {width: 25%;}
+          @include bp(iphone6-landscape) {width: 20%;}
         }
       }
 
@@ -563,6 +524,7 @@ header {
         text-align: center;
         @include bp(iphone-portrait) {margin-top: 5%; margin-bottom: 5%;}
         @include bp(iphone5-landscape) {margin-top: 3%; margin-bottom: 3%;}
+        @include bp(iphone6-landscape) {margin-top: 2%; margin-bottom: 2%;}
       }
 
       p {
@@ -824,6 +786,7 @@ header {
     margin-top: 5%;
     @include buttonStyling;
     @include bp(iphone-portrait) {margin-left: 33%;}
+    @include bp(iphone6-portrait) {margin-left: 36%;}
     //@include bp(iphone5-landscape) {;}
   }
 }
@@ -849,8 +812,9 @@ header {
       width: 100%;
       padding: 1rem;
       margin-bottom: 1rem;
-
       @include fontLato($font-family, 0.8rem, black, none);
+      @include bp(iphone-portrait) {padding: 0.5rem; border: 1px solid $colorgrey;}
+      @include bp(iphone5-landscape) {padding: 0.5rem; border: 1px solid $colorgrey;}
 
       &:focus {
         outline: 1px solid $colorviolet;
@@ -863,11 +827,15 @@ header {
 
     button {
       @include buttonStyling;
+      @include bp(iphone-portrait) {margin-left: 33%; }
+      //@include bp(iphone5-landscape) {@include headPhone;}
     }
   }
 
   .adress {
     padding: 1rem;
+    @include bp(iphone-portrait) {padding: 1rem 0;}
+    @include bp(iphone5-landscape) {padding: 1rem 0;}
 
     p{
       @include fontLato($font-family, 1rem, black, none);
