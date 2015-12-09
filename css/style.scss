@@ -241,9 +241,7 @@ header {
     text-align: left;
     font-size: 0.8rem;
 
-    @include bp(iphone-portrait) {
-      font-size: 2rem;
-    }
+    @include bp(iphone-portrait) {  font-size: 2rem;  }
   }
 }
 
@@ -261,7 +259,6 @@ header {
 
 .sticky_menu {
   background-color: #fff;
-  //height: 20%;
   padding: 1% 0%;
 
   a {
@@ -372,6 +369,7 @@ header {
 .about_us {
   background-color: #fff;
   padding-bottom: 4rem;
+  border: 1px solid red;
 
 
   .about {

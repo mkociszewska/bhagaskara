@@ -617,6 +617,7 @@ header .scroller img {
 .about_us {
   background-color: #fff;
   padding-bottom: 4rem;
+  border: 1px solid red;
 }
 .about_us .about {
   position: relative;

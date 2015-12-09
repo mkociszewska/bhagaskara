@@ -270,4 +270,97 @@ prevPerson.on("click", function(){
 
     });
 
+
+
+    //------------------------------------ SCROLLTO - header ------------------------------------
+
+    //$(element).scrollTo(target[,duration][,settings]);
+
+
+    //$('#jquery-object').click(function() {
+    //    $target.scrollTo($('#pane-target li:eq(14)') , 800);
+    //});
+
+    // This one is important, many browsers don't reset scroll on refreshes
+    // Reset all scrollable panes to (0,0)
+    $('div.pane').scrollTo(0);
+    // Reset the screen to (0,0)
+    $.scrollTo(0);
+
+    var stickymenuheight = $(".sticky_menu").height();
+    console.log(stickymenuheight);
+
+    //------------------------------------ about:
+    var aboutIcon = $(".aboutIcon");
+    var aboutposition = ($("#about").position().top - stickymenuheight);
+    console.log("sticky menu: " + stickymenuheight);
+    console.log("aboutposition: " + aboutposition);
+    console.log(".about_us: " + $("#about").position().top);
+
+    $(aboutIcon).click(function() {
+        console.log("funkcja aboutposition: " + aboutposition);
+        event.stopPropagation();
+        $(window).scrollTo(aboutposition, 800);
+    });
+
+    //------------------------------------ team:
+    var teamIcon = $(".teamIcon");
+    var teamposition = $(".our_team").offset().top - stickymenuheight;
+
+
+    $(teamIcon).click(function() {
+        event.stopPropagation();
+        $(window).scrollTo(teamposition, 800);
+    });
+
+    //------------------------------------ services:
+    var servicesIcon = $(".serviceIcon");
+    var servicesposition = $(".our_skills").offset().top - stickymenuheight;
+
+
+    $(servicesIcon).click(function() {
+        event.stopPropagation();
+        $(window).scrollTo(servicesposition, 800);
+    });
+
+    //------------------------------------ portfolio:
+    var portfolioIcon = $(".portfolioIcon");
+    var portfolioposition = $(".portfolio").offset().top  - stickymenuheight;
+
+
+    $(portfolioIcon).click(function() {
+        event.stopPropagation();
+        $(window).scrollTo(portfolioposition, 800);
+    });
+
+    //------------------------------------ blog:
+    var blogIcon = $(".blogIcon");
+    var blogposition = $(".getInTouch").offset().top - stickymenuheight;
+
+
+    $(blogIcon).click(function() {
+        event.stopPropagation();
+        $(window).scrollTo(blogposition, 800);
+    });
+
+    //------------------------------------ contact:
+    var contactIcon = $(".contactIcon");
+    var contactposition = $(".getInTouch").offset().top - stickymenuheight;
+    //console.log(contactposition);
+
+
+    $(contactIcon).click(function() {
+        event.stopPropagation();
+        $(window).scrollTo(contactposition, 800);
+    });
+
+    //------------------------------------ scroller:
+
+    var scrollerIcon = $(".scroller");
+
+    $(scrollerIcon).click(function(){
+        event.stopPropagation();
+        $(window).scrollTo(stickyNavTop, 800);
+    });
+
 });

@@ -11,6 +11,7 @@
 
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
 </head>
@@ -32,12 +33,12 @@
 
             <div class="row header-nav">
 
-                <div class="col-2 headerIcon"><img src="images/icons/settings.svg"/></div>
-                <div class="col-2 headerIcon"><img src="images/icons/user.svg"/></div>
-                <div class="topnav col-2 headerIcon"><img src="images/icons/bubble.svg"/></div>
-                <div class="topnav col-2 headerIcon"><img src="images/icons/photo.svg"/></div>
-                <div class="col-2 headerIcon"><img src="images/icons/pen.svg"/></div>
-                <div class="col-2 headerIcon"><img src="images/icons/paperplane.svg"/></div>
+                <div class="col-2 headerIcon aboutIcon"><img src="images/icons/settings.svg"/></div>
+                <div class="col-2 headerIcon teamIcon"><img src="images/icons/user.svg"/></div>
+                <div class="topnav col-2 headerIcon serviceIcon"><img src="images/icons/bubble.svg"/></div>
+                <div class="topnav col-2 headerIcon portfolioIcon"><img src="images/icons/photo.svg"/></div>
+                <div class="col-2 headerIcon blogIcon"><img src="images/icons/pen.svg"/></div>
+                <div class="col-2 headerIcon contactIcon"><img src="images/icons/paperplane.svg"/></div>
 
             </div>
 
@@ -68,13 +69,13 @@
 
                     <div class="mobileMenu notVisible">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#" class="aboutIcon">Home</a></li>
+                            <li><a href="#" class="aboutIcon">About</a></li>
+                            <li><a href="#" class="teamIcon">Team</a></li>
+                            <li><a href="#" class="servicesIcon">Services</a></li>
+                            <li><a href="#" class="portfolioIcon">Portfolio</a></li>
+                            <li><a href="#" class="blogIcon">Blog</a></li>
+                            <li><a href="#" class="contactIcon">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -148,7 +149,7 @@
 
 
 <section class="main_width">
-    <div class="about_us grid-container">
+    <div class="about_us grid-container" id="about">
         <div class="row about">
 
             <h2 class="col-12">About <span>us</span></h2>
