@@ -3,37 +3,6 @@
  */
 document.addEventListener('DOMContentLoaded', function() {
 
-    function setMenu() {
-
-
-        function setHam(){
-            if ($(window).width() < 1000) {
-                $('.sticky_list').hide();
-                $('.menuBtn').show();
-                $('.stickylogo').hide();
-            } else {
-                $('.sticky_list').show();
-                $('.menuBtn').hide();
-                $('.mobileMenu').hide();
-                $('.stickylogo').show();
-            }
-        }
-        setHam();
-
-        $(window).on('resize', function() {
-            setHam();
-        });
-    }
-
-    function setClick() {
-        $('.menuBtn').on('click', function() {
-            $('.mobileMenu').toggle();
-        });
-    }
-
-    setMenu();
-    setClick();
-
 
     //------------------------------------HEADER, GREY SECTION, ABOUT US, OUR SKILLS - PHONE------------------------------------
 
@@ -92,16 +61,62 @@ document.addEventListener('DOMContentLoaded', function() {
         stickyNav();
     });
 
+    //------------------------------------HAMBURGER MENU------------------------------------
+
+    function setMenu() {
+
+        $('.cross').hide();
+        $('.hamburger').hide();
+
+
+        if ($(window).width() < 1000) {
+            $('.sticky_list').hide();
+            $('.hamburger').show();
+            $('.mobileMenu').hide();
+            $('.stickylogo').hide();
+
+
+        } else {
+            $('.sticky_list').show();
+            $('.hamburger').hide();
+            $('.mobileMenu').hide();
+            $('.stickylogo').show();
+        }
+    }
+
+    setMenu();
+
+    $(window).on('resize', function() {
+        setMenu();
+    });
+
+
+    function setClick() {
+        $('.hamburger').on('click', function() {
+            $('.mobileMenu').show();
+            $('.cross').show();
+            $(this).hide();
+        });
+        $('.cross').on('click', function() {
+            $('.mobileMenu').hide();
+            $('.hamburger').show();
+            $(this).hide();
+
+        });
+    }
+
+    setMenu();
+    setClick();
 
 
 //------------------------------------ABOUT US GALLERY------------------------------------
 
-var allPeople = $(".peopleList li");
-var nextPerson = $("#nextPerson");
-var prevPerson = $("#prevPerson");
-var currentPerson = 1;
-var peopleList = $(".peopleList");
-var personId = $(allPeople[currentPerson]);
+    var allPeople = $(".peopleList li");
+    var nextPerson = $("#nextPerson");
+    var prevPerson = $("#prevPerson");
+    var currentPerson = 1;
+    var peopleList = $(".peopleList");
+    var personId = $(allPeople[currentPerson]);
 
     personId.removeClass('opacity');
 
@@ -114,76 +129,76 @@ var personId = $(allPeople[currentPerson]);
     }
     changeDisplay();
 
-nextPerson.on("click", function(){
-    //for screens:
-    if ($(window).width() > 700) {
-        currentPerson++;
+    nextPerson.on("click", function(){
+        //for screens:
+        if ($(window).width() > 700) {
+            currentPerson++;
 
             if(currentPerson >= allPeople.length) {
                 currentPerson = 0;
             }
-        $(allPeople).addClass('opacity');
-        $(allPeople[currentPerson]).removeClass('opacity');
+            $(allPeople).addClass('opacity');
+            $(allPeople[currentPerson]).removeClass('opacity');
 
-       animatebars($(allPeople[currentPerson]));
+            animatebars($(allPeople[currentPerson]));
 
-    //for phones:
-    } else {
+            //for phones:
+        } else {
 
-        personId.addClass('visibility');
-        allPeople.removeClass('opacity');
+            personId.addClass('visibility');
+            allPeople.removeClass('opacity');
 
-        allPeople.eq(currentPerson).fadeOut(300, function() {
-            allPeople.hide();
-            allPeople.eq(currentPerson).fadeIn(300);
-        });
+            allPeople.eq(currentPerson).fadeOut(300, function() {
+                allPeople.hide();
+                allPeople.eq(currentPerson).fadeIn(300);
+            });
 
-        currentPerson++;
+            currentPerson++;
 
-        if(currentPerson >= allPeople.length) {
-            currentPerson = 0;
+            if(currentPerson >= allPeople.length) {
+                currentPerson = 0;
+            }
+
+            animatebars($(allPeople[currentPerson]));
         }
-
-        animatebars($(allPeople[currentPerson]));
-    }
-});
+    });
 
 
-prevPerson.on("click", function(){
+    prevPerson.on("click", function(){
 
-    //for screens:
-    if ($(window).width() > 700) {
-        currentPerson--;
+        //for screens:
+        if ($(window).width() > 700) {
+            currentPerson--;
 
-        if(currentPerson < 0) {
-            currentPerson = allPeople.length-1;
-         }
+            if(currentPerson < 0) {
+                currentPerson = allPeople.length-1;
+            }
 
-    $(allPeople).addClass('opacity');
-    $(allPeople[currentPerson]).removeClass('opacity');
+            $(allPeople).addClass('opacity');
+            $(allPeople[currentPerson]).removeClass('opacity');
 
-    animatebars($(allPeople[currentPerson]));
+            animatebars($(allPeople[currentPerson]));
 
-    //for phones:
-    } else {
+            //for phones:
+        } else {
 
-        personId.addClass('visibility');
-        allPeople.removeClass('opacity');
+            personId.addClass('visibility');
+            allPeople.removeClass('opacity');
 
-        allPeople.eq(currentPerson).fadeOut(300, function() {
-            allPeople.hide();
-            allPeople.eq(currentPerson).fadeIn(300);
-        });
+            allPeople.eq(currentPerson).fadeOut(300, function() {
+                allPeople.hide();
+                allPeople.eq(currentPerson).fadeIn(300);
+            });
 
-        currentPerson--;
+            currentPerson--;
 
-        if(currentPerson < 0) {
-            currentPerson = allPeople.length-1;
+            if(currentPerson < 0) {
+                currentPerson = allPeople.length-1;
+            }
+
+            animatebars($(allPeople[currentPerson]));
         }
-
-        animatebars($(allPeople[currentPerson]));
-    }
-});
+    });
 
 
     //------------------------------------ PROGRESS BAR ------------------------------------

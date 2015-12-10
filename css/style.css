@@ -412,81 +412,14 @@ header .scroller img {
   left: 48.55%;
 }
 
-.notVisible {
-  display: none;
-}
-
-.menuBtn span {
-  display: block;
-  width: 20px;
-  height: 5px;
-  margin: 4px 0;
-  background: #9f449b;
-  border-radius: 30%;
-}
-
-.mobileNav {
-  width: 100%;
-  font-family: "latohairline";
-}
-.mobileNav a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-}
-.mobileNav ul {
-  padding: 5%;
-}
-.mobileNav li {
-  padding: 5px;
-  list-style: none;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: left;
-  font-size: 0.8rem;
-}
-@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
-  .mobileNav li {
-    font-size: 2rem;
-  }
-}
-
-.mobileMenu {
-  width: 70%;
-  background-color: rgba(159, 68, 155, 0.9);
-  overflow: visible;
-  position: fixed;
-  z-index: 999;
-}
-
 .sticky_menu {
   background-color: #fff;
   padding: 1% 0%;
-}
-@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 321px) {
-  .sticky_menu a {
-    display: none;
-  }
-}
-@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
-  .sticky_menu a {
-    display: none;
-  }
 }
 .sticky_menu ul {
   vertical-align: middle;
   text-align: right;
   height: 100%;
-}
-@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 321px) {
-  .sticky_menu ul {
-    display: none;
-  }
-}
-@media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
-  .sticky_menu ul {
-    display: none;
-  }
 }
 .sticky_menu li {
   display: inline;
@@ -496,6 +429,57 @@ header .scroller img {
   color: #676767;
   text-transform: Uppercase;
   padding-right: 1%;
+}
+
+.hamburger {
+  background: none;
+  padding: 0px 15px 0px 15px;
+  color: #9f449b;
+  border: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  outline: none;
+  z-index: 10000000000000;
+}
+
+.cross {
+  background: none;
+  padding: 0px 15px 0px 15px;
+  color: #9f449b;
+  border: 0;
+  font-size: 3em;
+  line-height: 65px;
+  font-weight: bold;
+  outline: none;
+  z-index: 10000000000000;
+  margin-bottom: -26px;
+  vertical-align: middle;
+}
+
+.mobileMenu {
+  width: 80%;
+  background-color: rgba(159, 68, 155, 0.9);
+  overflow: visible;
+  position: fixed;
+  z-index: 999;
+}
+.mobileMenu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+.mobileMenu ul li {
+  display: block;
+  padding: 10px 0 10px 0;
+  border-bottom: rgba(255, 255, 255, 0.8) 1px solid;
+}
+.mobileMenu ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  text-align: left;
+  margin-left: 1rem;
 }
 
 .sticky {

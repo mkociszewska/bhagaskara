@@ -203,56 +203,6 @@ header {
 
 }
 
-//------------------------------------mobile menu------------------------------------
-
-.notVisible {
-  display: none;
-}
-
-.menuBtn span {
-  display: block;
-  width: 20px;
-  height: 5px;
-  margin: 4px 0;
-  background: $colorviolet;
-  border-radius: 30%;
-  //z-index: 99;
-}
-
-.mobileNav {
-  width: 100%;
-  font-family: $font-family;
-
-  a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-  }
-
-  ul {
-    padding: 5%;
-  }
-
-  li {
-    padding: 5px;
-    list-style: none;
-    color: #fff;
-    text-transform: uppercase;
-    text-align: left;
-    font-size: 0.8rem;
-
-    @include bp(iphone-portrait) {  font-size: 2rem;  }
-  }
-}
-
-.mobileMenu {
-  width: 70%;
-  @include transparentViolet(0.9);
-  overflow: visible;
-  position: fixed;
-  z-index: 999;
-
-}
 
 
 //------------------------------------sticky menu------------------------------------
@@ -261,28 +211,13 @@ header {
   background-color: #fff;
   padding: 1% 0%;
 
-  a {
-    @include bp(iphone) {
-      display: none;
-    }
 
-    @include bp(iphone-portrait) {
-      display: none;
-    }
-  }
 
   ul {
     vertical-align: middle;
     text-align: right;
     height: 100%;
 
-    @include bp(iphone) {
-      display: none;
-    }
-
-    @include bp(iphone-portrait) {
-      display: none;
-    }
   }
 
   li {
@@ -294,6 +229,64 @@ header {
 
 
 }
+
+//------------------------------------mobile menu------------------------------------
+.hamburger{
+  background:none;
+  padding:0px 15px 0px 15px;
+  color: $colorviolet;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  outline:none;
+  z-index:10000000000000;
+}
+
+.cross{
+  background:none;
+  padding:0px 15px 0px 15px;
+  color: $colorviolet;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  outline:none;
+  z-index:10000000000000;
+  margin-bottom: -26px;
+  vertical-align: middle;
+}
+
+.mobileMenu {
+  width: 80%;
+  @include transparentViolet(0.9);
+  overflow: visible;
+  position: fixed;
+  z-index: 999;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+
+    li {
+      display: block;
+      padding:10px 0 10px 0;
+      border-bottom: rgba(255,255,255,0.8) 1px solid;
+
+      a {
+        text-decoration:none;
+        color: #fff;
+        display: block;
+        text-align: left;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+
+}
+
 
 //------------------------------------ sticky class------------------------------------
 
