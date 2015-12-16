@@ -11,16 +11,6 @@
 }
 
 
-
-//stylowanie nava
-//&:hover {
-//  fill: $colorviolet;
-//  stroke: $colorviolet;
-//  fill-opacity: 1.0;
-//}
-
-
-
 //------------------------------------grid------------------------------------
 
 .main_width {
@@ -137,6 +127,9 @@ header {
       &:hover {
         background-image: url("../images/icons/violet.svg");
         background-size: 98%;
+        @include bp(iphone5-landscape) {padding-bottom: 33%; background-size: 61%;}
+        @include bp(iphone6-landscape) {padding-bottom: 21%; background-size: 37%;}
+
 
       }
       @include bp(iphone-portrait) {padding-bottom: 54%;}
@@ -227,7 +220,6 @@ header {
     padding-right: 1%;
   }
 
-
 }
 
 //------------------------------------mobile menu------------------------------------
@@ -288,6 +280,7 @@ header {
 }
 
 
+
 //------------------------------------ sticky class------------------------------------
 
 .sticky {
@@ -298,6 +291,15 @@ header {
   top: 0;
   z-index: 100;
   border-top: 0;
+}
+
+.mobileArrow {
+  img {
+    position: fixed;
+    bottom: 1em;
+    right: 0.6em;
+    height: 4%;
+  }
 }
 
 //------------------------------------grey section with merits------------------------------------
@@ -319,7 +321,7 @@ header {
   }
 
   h1 {
-    @include fontLato($icon-font, 3rem, #ccd0d2, Uppercase);
+    @include fontLato($icon-font, 3rem, #fff, Uppercase);
     background-image: url('../images/Shape2.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -815,6 +817,13 @@ header {
     .yourmessage {
       height: 180px;
     }
+
+    .formName, .formEmail, .formText {
+      display:none;
+      @include fontLato($helvetica, 1rem, red, none);
+      padding-bottom: 1rem;
+    }
+
 
     button {
       @include buttonStyling;

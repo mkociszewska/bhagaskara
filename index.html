@@ -20,7 +20,7 @@
 <header>
     <div class="main_width">
         <div class="grid-container">
-            <div class="row jumbotron">
+            <div class="row jumbotron" id="jumbotron">
                 <div class="col-12">
 
                     <h3>Bhaga<span>skara.</span></h3>
@@ -33,19 +33,19 @@
 
             <div class="row header-nav">
 
-                <div class="col-2 headerIcon aboutIcon"><img src="images/icons/settings.svg"/></div>
-                <div class="col-2 headerIcon teamIcon"><img src="images/icons/user.svg"/></div>
-                <div class="topnav col-2 headerIcon serviceIcon"><img src="images/icons/bubble.svg"/></div>
-                <div class="topnav col-2 headerIcon portfolioIcon"><img src="images/icons/photo.svg"/></div>
-                <div class="col-2 headerIcon blogIcon"><img src="images/icons/pen.svg"/></div>
-                <div class="col-2 headerIcon contactIcon"><img src="images/icons/paperplane.svg"/></div>
+                <div class="col-2 headerIcon"><a class="honey" href="#about"><img src="images/icons/settings.svg"/></a></div>
+                <div class="col-2 headerIcon honey"><a class="honey" href="#team"><img src="images/icons/user.svg"/></a></div>
+                <div class="topnav col-2 headerIcon honey"><a class="honey" href="#services"><img src="images/icons/bubble.svg"/></a></div>
+                <div class="topnav col-2 headerIcon honey"><a class="honey" href="#portfolio"><img src="images/icons/photo.svg"/></a></div>
+                <div class="col-2 headerIcon honey"><a class="honey" href="#quote"><img src="images/icons/pen.svg"/></a></div>
+                <div class="col-2 headerIcon honey"><a class="honey" href="#contact"><img src="images/icons/paperplane.svg"/></a></div>
 
             </div>
 
             <!--tutaj scroller-->
 
             <div class="row scroller">
-                <div class="col-12"><img src="images/icons/arrow483.svg"/></div>
+                <div class="col-12"><a class="scrollerlink" href="#sticky"><img src="images/icons/arrow483.svg"/></a></div>
             </div>
 
         </div>
@@ -53,7 +53,7 @@
 </header>
 
 <!--sticky menu-->
-<section class="sticky_menu">
+<section class="sticky_menu" id="sticky">
     <div class="grid-container">
         <div class="main_width">
             <div class="row">
@@ -68,12 +68,12 @@
                     <div class="mobileMenu">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a class="honey" href="#about">About</a></li>
+                            <li><a class="honey" href="#team">Team</a></li>
+                            <li><a class="honey" href="#services">Services</a></li>
+                            <li><a class="honey" href="#portfolio">Portfolio</a></li>
+                            <li><a class="honey" href="#quote">Blog</a></li>
+                            <li><a class="honey" href="#quote">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -91,6 +91,10 @@
                     <li>blog</li>
                     <li>contact</li>
                 </ul>
+
+                <div class="mobileArrow">
+                    <a class="honey" href="#jumbotron"><img src="images/icons/stickyarrow.svg"></a>
+                </div>
             </div>
         </div>
     </div>
@@ -184,7 +188,7 @@
 
 <!--------------------------- our team  ----------------------- -->
 
-<section class="our_team">
+<section class="our_team" id="team">
     <div class="main_width">
         <h2>Our <span>team</span></h2>
 
@@ -225,7 +229,7 @@
 
 <!--------------------------- our skills  ----------------------- -->
 
-<section class="our_skills">
+<section class="our_skills" id="services">
     <div class="main_width">
 
         <h2 class="col-12">Our <span>skills</span></h2>
@@ -276,6 +280,8 @@
     </div>
 </section>
 
+<!--------------------------- statistics  ----------------------- -->
+
 <section class="statistics">
     <div class="main_width">
         <div class="grid-container">
@@ -301,8 +307,9 @@
     </div>
 </section>
 
+<!--------------------------- quote slider  ------------------------->
 
-<section class="quote_slider">
+<section class="quote_slider" id="quote">
     <div class="main_width">
         <div class="slide-container" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
 
@@ -331,7 +338,9 @@
     </div>
 </section>
 
-<section class="portfolio">
+<!--------------------------- portfolio  ----------------------- -->
+
+<section class="portfolio" id="portfolio">
     <div class="main_width">
 
         <h2 class="col-12">Our <span>portfolio</span></h2>
@@ -420,7 +429,9 @@
     </div>
 </section>
 
-<section class="getInTouch">
+<!--------------------------- contact  ----------------------- -->
+
+<section class="getInTouch" id="contact">
     <div class="main_width">
         <div class="grid-container">
 
@@ -430,12 +441,15 @@
 
             <div class="row">
                 <div class="col-6 formInputs">
-                    <form>
-                        <input type="text" name="yourname" placeholder="Your Name">
-                        <input type="text" name="youremail" placeholder="Your Email">
-                        <input type="text" name="yourmessage" placeholder="Your Message" class="yourmessage">
+                    <form id="form">
+                        <input type="text" name="field1" placeholder="Your Name" id="name">
+                        <p class="formName">Please enter your correct name</p>
+                        <input type="text" name="field2" placeholder="Your Email" id="email">
+                        <p class="formEmail">Please enter your correct e-mail</p>
+                        <input type="text" name="field3" placeholder="Your Message" class="yourmessage" id="message">
+                        <p class="formText">Please write correct message</p><br>
 
-                        <button type="button">Send email</button>
+                        <button type="button" id="button">Send email</button>
                     </form>
                 </div>
 
@@ -452,9 +466,15 @@
                         M: (202) 456-1212
                     </p>
 
-                    <a href="/"><img src="images/icons/f.svg"></a>
-                    <a href="/"><img src="images/icons/t.svg"></a>
-                    <a href="/"><img src="images/icons/g.svg"></a>
+                    <a href="/">
+                        <img src="images/icons/f.svg" class="greySocial">
+                    </a>
+                    <a href="/">
+                        <img src="images/icons/t.svg" class="greySocial">
+                    </a>
+                    <a href="/">
+                        <img src="images/icons/g.svg" class="greySocial">
+                    </a>
 
                 </div>
             </div>

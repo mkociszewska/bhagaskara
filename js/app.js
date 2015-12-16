@@ -50,8 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (scrollTop > stickyNavTop) {
             $('.sticky_menu').addClass('sticky');
+            $('.mobileArrow').show();
         } else {
             $('.sticky_menu').removeClass('sticky');
+            $('.mobileArrow').hide();
         }
     };
 
@@ -60,6 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
     $(window).scroll(function() {
         stickyNav();
     });
+
+    //------------------------------------MOBILE MENU------------------------------------
+
 
     //------------------------------------HAMBURGER MENU------------------------------------
 
@@ -289,93 +294,102 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //------------------------------------ SCROLLTO - header ------------------------------------
 
-    //$(element).scrollTo(target[,duration][,settings]);
+    var stickymenuheight = $(".sticky_menu").height();
+    var linkTop = $("#portfolio").offset().top;
+
+    console.log(linkTop);
+    console.log(stickymenuheight);
+    console.log(linkTop-stickymenuheight);
+
+    $('.honey').click(function(event) {
+        event.preventDefault();
+        var href = $(this).attr("href");
+        console.log(href);
+        $('html, body').animate({
+            scrollTop: $(href).offset().top - stickymenuheight
+        }, 2000);
+    });
 
 
-    //$('#jquery-object').click(function() {
-    //    $target.scrollTo($('#pane-target li:eq(14)') , 800);
+    console.log($(".sticky_menu").height())
+
+
+
+    //var stickymenuheight = $(".sticky_menu").height() * 3;
+    //console.log(stickymenuheight);
+    //
+    //
+    //$('.honey').click(function(event) {
+    //    event.preventDefault();
+    //    var href = $(this).attr('href');
+    //    console.log(href);
+    //    $('html, body').animate({
+    //        scrollTop: $(href).offset().top - stickymenuheight
+    //    }, 2000);
     //});
 
-    // This one is important, many browsers don't reset scroll on refreshes
-    // Reset all scrollable panes to (0,0)
-    $('div.pane').scrollTo(0);
-    // Reset the screen to (0,0)
-    $.scrollTo(0);
 
-    var stickymenuheight = $(".sticky_menu").height();
-    console.log(stickymenuheight);
 
-    //------------------------------------ about:
-    var aboutIcon = $(".aboutIcon");
-    var aboutposition = ($("#about").position().top - stickymenuheight);
-    console.log("sticky menu: " + stickymenuheight);
-    console.log("aboutposition: " + aboutposition);
-    console.log(".about_us: " + $("#about").position().top);
 
-    $(aboutIcon).click(function() {
-        console.log("funkcja aboutposition: " + aboutposition);
-        event.stopPropagation();
-        $(window).scrollTo(aboutposition, 800);
+    //------------------------------------ SCROLLTO - scroller ------------------------------------
+
+    $('.scrollerlink').click(function(event) {
+        event.preventDefault();
+        var href = $(this).attr("href");
+        $('html, body').animate({
+            scrollTop: $(href).offset().top
+        }, 1000);
     });
 
-    //------------------------------------ team:
-    var teamIcon = $(".teamIcon");
-    var teamposition = $(".our_team").offset().top - stickymenuheight;
 
 
-    $(teamIcon).click(function() {
-        event.stopPropagation();
-        $(window).scrollTo(teamposition, 800);
-    });
+    //------------------------------------ FORM VALIDATION ------------------------------------
 
-    //------------------------------------ services:
-    var servicesIcon = $(".serviceIcon");
-    var servicesposition = $(".our_skills").offset().top - stickymenuheight;
+    function checkValidate() {
 
+        var name = $('#form').find("input#name");
+        console.log(name);
+        var email = $('#form').find("input#email");
+        var text = $('#form').find("input#message");
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 
-    $(servicesIcon).click(function() {
-        event.stopPropagation();
-        $(window).scrollTo(servicesposition, 800);
-    });
-
-    //------------------------------------ portfolio:
-    var portfolioIcon = $(".portfolioIcon");
-    var portfolioposition = $(".portfolio").offset().top  - stickymenuheight;
+        var nameSpan = $('#form').find("p.formName");
+        var emailSpan = $('#form').find("p.formEmail");
+        var textSpan = $('#form').find("p.formText");
 
 
-    $(portfolioIcon).click(function() {
-        event.stopPropagation();
-        $(window).scrollTo(portfolioposition, 800);
-    });
+        $("#button").click(function () {
 
-    //------------------------------------ blog:
-    var blogIcon = $(".blogIcon");
-    var blogposition = $(".getInTouch").offset().top - stickymenuheight;
+            //sprawdzenie poprawnosci imienia
 
+            if ((name.val().length >= 3) && (name.val().length <= 10)) {
+                console.log('ok')
+            }
+            else {
+                console.log("error");
+                nameSpan.show();
+            }
 
-    $(blogIcon).click(function() {
-        event.stopPropagation();
-        $(window).scrollTo(blogposition, 800);
-    });
+            // sprawdzenie poprawnosci e-mail
+            if (re.test(email.val())) {
+                console.log('ok')
+            }
+            else {
+                console.log("error");
+                emailSpan.show();
+            }
 
-    //------------------------------------ contact:
-    var contactIcon = $(".contactIcon");
-    var contactposition = $(".getInTouch").offset().top - stickymenuheight;
-    //console.log(contactposition);
+            // sprawdzenie poprawnosci wiadomosci
+            if ((text.val().length > 0) && (text.val().length <= 100)) {
+                console.log('ok')
+            }
+            else {
+                console.log("error");
+                textSpan.show();
+            }
+        })
+    }
+    checkValidate();
 
-
-    $(contactIcon).click(function() {
-        event.stopPropagation();
-        $(window).scrollTo(contactposition, 800);
-    });
-
-    //------------------------------------ scroller:
-
-    var scrollerIcon = $(".scroller");
-
-    $(scrollerIcon).click(function(){
-        event.stopPropagation();
-        $(window).scrollTo(stickyNavTop, 800);
-    });
 
 });
