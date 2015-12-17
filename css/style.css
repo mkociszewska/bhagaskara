@@ -247,15 +247,36 @@ header {
       header h3 {
         font-size: 2.5rem;
         padding-top: 6%; } }
+    @media only screen and (min-width: 1824px), only screen and (min-device-width: 1824px) {
+      header h3 {
+        font-size: 5.5rem;
+        padding-top: 8%;
+        padding-bottom: 5%; } }
+    @media only screen and (max-width: 1824px) and (min-width: 1024px), only screen and (max-device-width: 1824px) {
+      header h3 {
+        font-size: 5rem;
+        padding-top: 4.5%;
+        padding-bottom: 3%; } }
+    @media handheld, only screen and (max-width: 1024px) and (min-width: 669px) {
+      header h3 {
+        font-size: 2rem;
+        padding-top: 4%;
+        padding-bottom: 2%; } }
   header h4 {
     font-family: "latohairline";
     color: white;
     font-size: 1.4rem; }
+    @media handheld, only screen and (max-width: 1024px) and (min-width: 669px) {
+      header h4 {
+        font-size: 1rem; } }
   header p {
     font-family: "latohairline";
     color: white;
     font-size: 1rem;
     padding: 2% 4%; }
+    @media handheld, only screen and (max-width: 1024px) and (min-width: 669px) {
+      header p {
+        font-size: 0.6rem; } }
   header .header-nav {
     border: 1px solid blue;
     margin-top: 14%; }
@@ -297,24 +318,29 @@ header {
         header .header-nav .headerIcon {
           padding-bottom: 21%;
           background-size: 37%; } }
-    header .header-nav img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      position: absolute;
-      top: 30%;
-      width: 40%;
-      left: 30%; }
-      @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
-        header .header-nav img {
-          top: 26%;
-          width: 30%;
-          left: 35%; } }
-      @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
-        header .header-nav img {
-          top: 15%;
-          width: 22%;
-          left: 39%; } }
+      header .header-nav .headerIcon img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        top: 30%;
+        width: 40%;
+        left: 30%; }
+        @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
+          header .header-nav .headerIcon img {
+            top: 26%;
+            width: 30%;
+            left: 35%; } }
+        @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
+          header .header-nav .headerIcon img {
+            top: 15%;
+            width: 22%;
+            left: 39%; } }
+        @media handheld, only screen and (max-width: 1024px) and (min-width: 669px) {
+          header .header-nav .headerIcon img {
+            top: 27%;
+            width: 54%;
+            left: 23%; } }
     header .header-nav .topnav {
       margin-top: -15%; }
       header .header-nav .topnav img {
@@ -337,6 +363,10 @@ header {
       top: 37%;
       width: 3%;
       left: 48.55%; }
+    @media only screen and (min-width: 1824px), only screen and (min-device-width: 1824px) {
+      header .scroller {
+        padding-bottom: 11%;
+        top: 39%; } }
 
 .sticky_menu {
   background-color: #fff;
@@ -353,6 +383,11 @@ header {
     color: #676767;
     text-transform: Uppercase;
     padding-right: 1%; }
+    .sticky_menu li:hover {
+      font-family: "latobold";
+      font-size: 0.8rem;
+      color: #9f449b;
+      text-transform: Uppercase; }
 
 .hamburger {
   background: none;
@@ -412,6 +447,15 @@ header {
   bottom: 1em;
   right: 0.6em;
   height: 4%; }
+  @media only screen and (min-width: 1824px), only screen and (min-device-width: 1824px) {
+    .mobileArrow img {
+      height: 2%;
+      bottom: 2em;
+      right: 10em; } }
+  @media only screen and (max-width: 1824px) and (min-width: 1024px), only screen and (max-device-width: 1824px) {
+    .mobileArrow img {
+      height: 2%;
+      right: 3em; } }
 
 .merits {
   background-color: #eeeeee;
@@ -429,6 +473,9 @@ header {
   @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
     .merits {
       height: 36rem; } }
+  @media handheld, only screen and (max-width: 1024px) and (min-width: 669px) {
+    .merits {
+      height: 32rem; } }
   .merits .grey {
     margin-top: 10%; }
     @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 375px) and (min-width: 321px) {
@@ -437,6 +484,9 @@ header {
     @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 669px) and (min-width: 569px) {
       .merits .grey {
         margin-top: 0; } }
+    @media only screen and (min-width: 1824px), only screen and (min-device-width: 1824px) {
+      .merits .grey {
+        margin-top: 5%; } }
   .merits h1 {
     font-family: "Glyphter";
     font-size: 3rem;

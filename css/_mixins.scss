@@ -71,7 +71,8 @@ $media-queries: true;
     }
     @if $point == big-screen {
       @media // Desktops and Laptops
-      only screen and (max-width: #{$bp-bigscreen}),
+      only screen and (max-width: #{$bp-bigscreen})
+      and (min-width: #{$bp-ipad-max}),
       only screen and (max-device-width: #{$bp-bigscreen}) {
         @content;
       }
@@ -88,7 +89,7 @@ $media-queries: true;
       @media // iPad (portrait and landscape)
       handheld,
       only screen and (max-width: #{$bp-ipad-max})
-      and (min-width: #{$bp-iphone5-max}) {
+      and (min-width: #{$bp-iphone6-max}) {
         @content;
       }
     }

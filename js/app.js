@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    console.log($(".sticky_menu").height())
+    console.log($(".sticky_menu").height());
 
 
 

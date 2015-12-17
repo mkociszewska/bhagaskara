@@ -18,9 +18,7 @@
   border: 1px solid pink;
   margin: auto;
 
-  @include bp(iphone) {
-    width: 90%
-  }
+  @include bp(iphone) {  width: 90%  }
 }
 
 
@@ -67,11 +65,11 @@ header {
   padding-bottom: 53%;
   text-align: center;
 
-  @include bp(large-screen) {background-size: cover;}
-  @include bp(iphone5-landscape) {padding-bottom: 155%;}
-  @include bp(iphone-portrait) {padding-bottom: 222%;  }
-  @include bp(iphone6-portrait) {padding-bottom: 175%;  }
-  @include bp(iphone6-landscape) {padding-bottom: 103%;  }
+  @include bp(large-screen) {  background-size: cover;  }
+  @include bp(iphone5-landscape) {  padding-bottom: 155%;  }
+  @include bp(iphone-portrait) {  padding-bottom: 222%;  }
+  @include bp(iphone6-portrait) {  padding-bottom: 175%;  }
+  @include bp(iphone6-landscape) {  padding-bottom: 103%;  }
 
   h3 {
     font-family: existencelight;
@@ -84,12 +82,10 @@ header {
       color: #9f449b;
     }
 
-
-    //@include bp(iphone) {
-    //  font-size: 3rem;
-    //}
-
-    @include bp(iphone-portrait) {font-size: 2.5rem; padding-top: 6%; }
+    @include bp(iphone-portrait) {  font-size: 2.5rem;  padding-top: 6%;  }
+    @include bp(large-screen) {  font-size: 5.5rem;  padding-top: 8%;  padding-bottom: 5%;  }
+    @include bp(big-screen) {  font-size: 5rem;  padding-top: 4.5%; padding-bottom: 3%; }
+    @include bp(ipad) {  font-size: 2rem;  padding-top: 4%;  padding-bottom: 2%;  }
 
   }
 
@@ -97,6 +93,8 @@ header {
     font-family: $font-family;
     color: white;
     font-size: 1.4rem;
+    @include bp(ipad) {  font-size: 1rem;  }
+
   }
 
   p {
@@ -104,14 +102,18 @@ header {
     color: white;
     font-size: 1rem;
     padding: 2% 4%;
+    @include bp(ipad) {  font-size: 0.6rem;  }
   }
 
   .header-nav {
     border: 1px solid blue;
     margin-top: 14%;
-    @include bp(iphone6-landscape) {margin-top: 1%;}
-    @include bp(iphone6-portrait) {margin-top: 0;}
-
+    @include bp(iphone6-landscape) {
+      margin-top: 1%;
+    }
+    @include bp(iphone6-portrait) {
+      margin-top: 0;
+    }
 
     .headerIcon {
       background-image: url("../images/Shape2.svg");
@@ -127,31 +129,50 @@ header {
       &:hover {
         background-image: url("../images/icons/violet.svg");
         background-size: 98%;
-        @include bp(iphone5-landscape) {padding-bottom: 33%; background-size: 61%;}
-        @include bp(iphone6-landscape) {padding-bottom: 21%; background-size: 37%;}
-
-
+        @include bp(iphone5-landscape) {
+          padding-bottom: 33%;
+          background-size: 61%;
+        }
+        @include bp(iphone6-landscape) {
+          padding-bottom: 21%;
+          background-size: 37%;
+        }
       }
-      @include bp(iphone-portrait) {padding-bottom: 54%;}
-      @include bp(iphone5-landscape) {padding-bottom: 33%; background-size: 61%;}
-      //@include bp(iphone6-portrait) {padding-bottom: 175%;  }
-      @include bp(iphone6-landscape) {padding-bottom: 21%; background-size: 37%;}
+
+      @include bp(iphone-portrait) {
+        padding-bottom: 54%;
+      }
+      @include bp(iphone5-landscape) {
+        padding-bottom: 33%;
+        background-size: 61%;
+      }
+      @include bp(iphone6-landscape) {
+        padding-bottom: 21%;
+        background-size: 37%;
+      }
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        top: 30%;
+        width: 40%;
+        left: 30%;
+
+        @include bp(iphone5-landscape) {
+          top: 26%;
+          width: 30%;
+          left: 35%;
+        }
+        @include bp(iphone6-landscape) {
+          top: 15%;
+          width: 22%;
+          left: 39%;
+        }
+        @include bp(ipad) {  top: 27%;  width: 54%;  left: 23%;  }
+      }
     }
-
-    img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      //padding-top: 80%;
-      position: absolute;
-      top: 30%;
-      width: 40%;
-      left: 30%;
-
-      @include bp(iphone5-landscape) {  top: 26%;  width: 30%;  left: 35%;  }
-      @include bp(iphone6-landscape) {top: 15%;  width: 22%;  left: 39%;  }
-    }
-
     .topnav {
       margin-top: -15%;
 
@@ -159,8 +180,9 @@ header {
         top: 30%;
       }
     }
-
   }
+
+
 
   .scroller {
     background-image: url("../images/Shape2.svg");
@@ -183,18 +205,12 @@ header {
       left: 48.55%;
 
     }
-
-    //@include bp(iphone) {
-    //  margin-top: 45%;
-    //}
-    //
-    //@include bp(iphone-portrait) {
-    //  margin-top: 58%;
-    //}
+    @include bp(large-screen) {  padding-bottom: 11%;  top: 39%;  }
 
   }
-
 }
+
+
 
 
 
@@ -218,6 +234,8 @@ header {
     list-style: none;
     @include fontLato($font-family-second, 0.8rem, #676767, Uppercase);
     padding-right: 1%;
+
+    &:hover { @include fontLato($latobold, 0.8rem, $colorviolet, Uppercase);}
   }
 
 }
@@ -299,6 +317,12 @@ header {
     bottom: 1em;
     right: 0.6em;
     height: 4%;
+    //@include bp(iphone-portrait) {  height: ;  }
+    //@include bp(iphone5-landscape) {  height: ;  }
+    //@include bp(iphone6-portrait) {  height: ;  }
+    //@include bp(iphone6-landscape) {  height: ;  }
+    @include bp(large-screen) {  height: 2%; bottom: 2em; right: 10em }
+    @include bp(big-screen) {  height: 2%; right: 3em }
   }
 }
 
@@ -313,11 +337,13 @@ header {
   @include bp(iphone5-landscape) {  height: 60rem;  }
   @include bp(iphone6-portrait) {  height: 52rem;  }
   @include bp(iphone6-landscape) {  height: 36rem;  }
+  @include bp(ipad) { height: 32rem; }
 
   .grey {
     margin-top: 10%;
     @include bp(iphone6-portrait) {margin-top: 5%;}
     @include bp(iphone6-landscape) { margin-top: 0;}
+    @include bp(large-screen) {margin-top: 5%;}
   }
 
   h1 {
