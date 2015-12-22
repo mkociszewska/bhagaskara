@@ -209,10 +209,6 @@ document.addEventListener('DOMContentLoaded', function() {
     //------------------------------------ PROGRESS BAR ------------------------------------
 
     function animatebars(skill) {
-        //var skill = $(".skill");
-
-
-        //console.log(skill);
 
         var webpercent = skill.data('webpercent');
         var graphicpercent = skill.data('graphicpercent');
@@ -236,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
     animatebars(personId);
 
     //------------------------------------ PORTFOLIO ------------------------------------
-    //------------------------------------ hover
+    //------------------------------------ hover in images
 
     var portfolioPicture = $(".picture img");
     var portfolioPictureOverlay = $(".overlay");
@@ -276,6 +272,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
     imageEnlarge();
 
+    //------------------------------------ searching by tags
+
+    var tagAll = $('#tagAll');
+    var tagWeb = $('#tagWeb');
+    var tagApps = $('#tagApps');
+    var tagIcons = $('#tagIcons');
+
+    var portfolioRow = $('.portfolioGalleryRow');
+
+    var imgWeb = $('.project[data-tag="web"]');
+    var imgApps = $('.project[data-tag="apps"]');
+    var imgIcons = $('.project[data-tag="icons"]');
+
+    tagAll.on('click',function(){
+        $('.project').show();
+    });
+
+    tagWeb.on('click',function(){
+        imgWeb.show();
+        imgApps.hide();
+        imgIcons.hide();
+        portfolioRow.removeClass('row').css('display',"inline");
+    });
+
+    tagApps.on('click',function(){
+        imgWeb.hide();
+        imgApps.show();
+        imgIcons.hide();
+        portfolioRow.removeClass('row').css('display',"inline");
+    });
+
+    tagIcons.on('click',function(){
+        imgWeb.hide();
+        imgApps.hide();
+        imgIcons.show();
+        portfolioRow.removeClass('row').css('display',"inline");
+    });
+
     //------------------------------------ QUOTE SLIDER ------------------------------------
 
     var slider = $(".slide-container");
@@ -294,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //------------------------------------ SCROLLTO - header ------------------------------------
 
-    var stickymenuheight = $(".sticky_menu").height();
+    var stickymenuheight = $("#sticky").height();
     var linkTop = $("#portfolio").offset().top;
 
     console.log(linkTop);
@@ -306,8 +340,9 @@ document.addEventListener('DOMContentLoaded', function() {
         var href = $(this).attr("href");
         console.log(href);
         $('html, body').animate({
-            scrollTop: $(href).offset().top - stickymenuheight
+            scrollTop: $(href).offset().top - stickymenuheight * 3
         }, 2000);
+        return false;
     });
 
 
@@ -348,11 +383,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function checkValidate() {
 
         var name = $('#form').find("input#name");
-        console.log(name);
         var email = $('#form').find("input#email");
         var text = $('#form').find("input#message");
         var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-
         var nameSpan = $('#form').find("p.formName");
         var emailSpan = $('#form').find("p.formEmail");
         var textSpan = $('#form').find("p.formText");

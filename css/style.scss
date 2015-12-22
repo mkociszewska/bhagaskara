@@ -624,15 +624,6 @@ header {
         100% {width:100%;}
       }
     }
-    //span {
-    //  //height: 10px;
-    //  //width: 80%;
-    //  //padding: 0.em;
-    //  background-color: dimgray;
-    //  padding-bottom: 12px;
-    //  border: 1px solid red;
-    //}
-    //}
   }
 
 
@@ -826,11 +817,12 @@ header {
   .formInputs {
     display: block;
 
-    input{
+    input, textarea {
       display: block;
       width: 100%;
       padding: 1rem;
       margin-bottom: 1rem;
+      resize: none;
       @include fontLato($font-family, 0.8rem, black, none);
       @include bp(iphone-portrait) {padding: 0.5rem; border: 1px solid $colorgrey;}
       @include bp(iphone5-landscape) {padding: 0.5rem; border: 1px solid $colorgrey;}

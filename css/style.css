@@ -1122,24 +1122,25 @@ header {
           color: #9f449b; } }
   .getInTouch .formInputs {
     display: block; }
-    .getInTouch .formInputs input {
+    .getInTouch .formInputs input, .getInTouch .formInputs textarea {
       display: block;
       width: 100%;
       padding: 1rem;
       margin-bottom: 1rem;
+      resize: none;
       font-family: "latohairline";
       font-size: 0.8rem;
       color: black;
       text-transform: none; }
       @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 321px) {
-        .getInTouch .formInputs input {
+        .getInTouch .formInputs input, .getInTouch .formInputs textarea {
           padding: 0.5rem;
           border: 1px solid #565d67; } }
       @media handheld, only screen and (min-device-pixel-ratio: 2), only screen and (max-width: 568px) and (min-width: 321px) {
-        .getInTouch .formInputs input {
+        .getInTouch .formInputs input, .getInTouch .formInputs textarea {
           padding: 0.5rem;
           border: 1px solid #565d67; } }
-      .getInTouch .formInputs input:focus {
+      .getInTouch .formInputs input:focus, .getInTouch .formInputs textarea:focus {
         outline: 1px solid #9f449b; }
     .getInTouch .formInputs .yourmessage {
       height: 180px; }

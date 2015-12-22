@@ -34,11 +34,11 @@
             <div class="row header-nav">
 
                 <div class="col-2 headerIcon"><a class="honey" href="#about"><img src="images/icons/settings.svg"/></a></div>
-                <div class="col-2 headerIcon honey"><a class="honey" href="#team"><img src="images/icons/user.svg"/></a></div>
-                <div class="topnav col-2 headerIcon honey"><a class="honey" href="#services"><img src="images/icons/bubble.svg"/></a></div>
-                <div class="topnav col-2 headerIcon honey"><a class="honey" href="#portfolio"><img src="images/icons/photo.svg"/></a></div>
-                <div class="col-2 headerIcon honey"><a class="honey" href="#quote"><img src="images/icons/pen.svg"/></a></div>
-                <div class="col-2 headerIcon honey"><a class="honey" href="#contact"><img src="images/icons/paperplane.svg"/></a></div>
+                <div class="col-2 headerIcon"><a class="honey" href="#team"><img src="images/icons/user.svg"/></a></div>
+                <div class="topnav col-2 headerIcon"><a class="honey" href="#services"><img src="images/icons/bubble.svg"/></a></div>
+                <div class="topnav col-2 headerIcon"><a class="honey" href="#portfolio"><img src="images/icons/photo.svg"/></a></div>
+                <div class="col-2 headerIcon"><a class="honey" href="#quote"><img src="images/icons/pen.svg"/></a></div>
+                <div class="col-2 headerIcon"><a class="honey" href="#contact"><img src="images/icons/paperplane.svg"/></a></div>
 
             </div>
 
@@ -101,7 +101,7 @@
 </section>
 
 
-<!--------------------------- grey section ----------------------- -->
+<!--------------------------- grey section with 4 pictures about the company ----------------------- -->
 
 <section class="merits">
     <div class="main_width">
@@ -345,15 +345,18 @@
 
         <h2 class="col-12">Our <span>portfolio</span></h2>
         <div class="col-12">
-            <div class="buttons">
-                <button type="button">All</button><button type="button">web</button><button type="button">apps</button><button type="button">icons</button>
+            <div class="buttons tags">
+                <button type="button" id="tagAll">All</button>
+                <button type="button" id="tagWeb">web</button>
+                <button type="button" id="tagApps">apps</button>
+                <button type="button" id="tagIcons">icons</button>
             </div>
         </div>
 
 
         <div class="grid-container">
-            <div class="row">
-                <div class="col-4 project">
+            <div class="portfolioGalleryRow row">
+                <div class="col-4 project" data-tag="web">
                     <div class="picture">
                         <img src="images/portfolio/portfolio_03.png">
                         <div class="overlay">+</div>
@@ -364,7 +367,7 @@
                     <h4>Neque Porro Quisquam</h4>
                     <p>apps, icons, ui</p>
                 </div>
-                <div class="col-4 project">
+                <div class="col-4 project" data-tag="apps">
                     <div class="picture">
                         <img src="images/portfolio/portfolio_05.png">
                         <div class="overlay">+</div>
@@ -375,7 +378,7 @@
                     <h4>Neque Porro Quisquam</h4>
                     <p>apps, icons, ui</p>
                 </div>
-                <div class="col-4 project">
+                <div class="col-4 project" data-tag="icons">
                     <div class="picture">
                         <img src="images/portfolio/portfolio_07.png">
                         <div class="overlay">+</div>
@@ -388,8 +391,8 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-4 project">
+            <div class="row portfolioGalleryRow">
+                <div class="col-4 project" data-tag="web">
                     <div class="picture">
                         <img src="images/portfolio/portfolio_12.png">
                         <div class="overlay">+</div>
@@ -400,7 +403,7 @@
                     <h4>Neque Porro Quisquam</h4>
                     <p>apps, icons, ui</p>
                 </div>
-                <div class="col-4 project">
+                <div class="col-4 project" data-tag="apps">
                     <div class="picture">
                         <img src="images/portfolio/portfolio_13.jpg">
                         <div class="overlay">+</div>
@@ -411,7 +414,7 @@
                     <h4>Neque Porro Quisquam</h4>
                     <p>apps, icons, ui</p>
                 </div>
-                <div class="col-4 project">
+                <div class="col-4 project" data-tag="icons">
                     <div class="picture">
                         <img src="images/portfolio/portfolio_03.png">
                         <div class="overlay">+</div>
@@ -446,7 +449,7 @@
                         <p class="formName">Please enter your correct name</p>
                         <input type="text" name="field2" placeholder="Your Email" id="email">
                         <p class="formEmail">Please enter your correct e-mail</p>
-                        <input type="text" name="field3" placeholder="Your Message" class="yourmessage" id="message">
+                        <textarea name="field3" placeholder="Your Message" class="yourmessage" id="message"></textarea>
                         <p class="formText">Please write correct message</p><br>
 
                         <button type="button" id="button">Send email</button>
